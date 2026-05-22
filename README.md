@@ -1,7 +1,7 @@
 README.md
 # Hi, I'm Ability Christopher 👋
 
-## Guidance Counsellor | Digital Literacy Advocate | Youth Development Enthusiast | Digital Marketing Trainee
+## Educator | Counsellor | Mentor
 
 I am passionate about empowering people through education, mentorship, advocacy, counselling, and digital transformation.
 
