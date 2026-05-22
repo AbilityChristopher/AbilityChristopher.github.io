@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Ability Christopher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            color: #1e2a3e;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .nav {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #cbd5e1;
+        }
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #0a3b5c;
+            font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #0a3b5c;
+            margin-bottom: 10px;
+        }
+        .intro {
+            margin-bottom: 30px;
+            background: #e9f0f5;
+            padding: 20px;
+            border-radius: 16px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .gallery-item {
+            background: #f8fafc;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .caption {
+            padding: 15px;
+            font-size: 0.95rem;
+            color: #1e2a3e;
+            background: white;
+        }
+        footer {
+            text-align: center;
+            margin-top: 45px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9rem;
+            color: #5c6f87;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            .gallery { gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="nav">
+        <a href="https://abilitychristopher.github.io/">Home</a>
+        <a href="services.html">Services</a>
+        <a href="connect.html">Connect</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+    <h1>📸 Community Impact Gallery</h1>
+
+    <div class="intro">
+        <p><strong>Ser‑Av Foundation – Strategy Presentation</strong><br>
+        I recently led a session analyzing our core challenges to improve efficiency. We identified gaps in three key areas:</p>
+        <ul>
+            <li><strong>Operations:</strong> Communication and financial costs</li>
+            <li><strong>Institutions:</strong> Lack of reliable partnerships</li>
+            <li><strong>Human Resources:</strong> Personnel and expertise shortages</li>
+        </ul>
+        <p>Grateful to work with a team that embraces critical feedback to fuel our mission.</p>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="serav-1.jpg" alt="Presentation at Ser-Av Foundation">
+            <div class="caption">📊 Breaking down operational challenges – communication & financial costs.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="serav-2.jpg" alt="Team discussing institutional partnerships">
+            <div class="caption">🤝 Addressing the lack of reliable institutional partnerships.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="serav-3.jpg" alt="Human resources and expertise gaps">
+            <div class="caption">🧠 Identifying personnel and expertise shortages – and solutions.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="serav-4.jpg" alt="Group photo after the session">
+            <div class="caption">🌟 The Ser‑Av team: committed to growth and community impact.</div>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 Ability Christopher — Serving communities through honest analysis and action.
+    </footer>
+</div>
+
+</body>
+</html>
