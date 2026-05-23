@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ability Christopher | Educator, Counsellor & Mentor</title>
-    <meta name="description" content="Ability Christopher – Educator, Counsellor & Mentor empowering youth in Nigeria. Digital literacy, leadership, and personal development.">
+    <title>Ability Christopher | Educator, Counsellor & Mentor | Youth Development Advocate</title>
+    <meta name="description" content="Ability Christopher – Educator, Counsellor & Mentor. Empowering youth through leadership development, digital literacy, financial education, and career guidance in Nigeria.">
+    <meta name="keywords" content="Leadership Development, Digital Literacy Training, Financial Literacy Education, Personal Development, Public Speaking, Career Coaching, Youth Mentorship, Guidance and Counselling, Professional Development, Human Potential Development">
+    <meta name="author" content="Ability Christopher">
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Ability Christopher | Educator, Counsellor & Mentor">
+    <meta property="og:description" content="Empowering individuals through leadership, digital literacy, and mentorship.">
+    <meta property="og:url" content="https://abilitychristopher.github.io">
+    <meta property="og:type" content="website">
     <style>
         * {
             margin: 0;
@@ -12,29 +19,26 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            font-family: 'Segoe UI', 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fc 0%, #e9eef5 100%);
             color: #1e2a3e;
             line-height: 1.6;
             padding: 40px 20px;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
             background: white;
             border-radius: 32px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 50px 40px;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.08);
             transition: transform 0.2s ease;
-        }
-        .container:hover {
-            transform: translateY(-5px);
         }
         .nav {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             padding-bottom: 15px;
-            border-bottom: 2px solid #cbd5e1;
+            border-bottom: 2px solid #e2e8f0;
         }
         .nav a {
             margin: 0 20px;
@@ -46,58 +50,65 @@
         .nav a:hover {
             color: #f59e0b;
         }
-        .profile-img {
+        .hero {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 60px;
         }
-        .profile-img img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #f59e0b;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            font-size: 2.5rem;
-            text-align: center;
+        .hero h1 {
+            font-size: 3.5rem;
             background: linear-gradient(120deg, #0a3b5c, #1e4a6b);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
             margin-bottom: 20px;
         }
-        .main-tagline {
-            font-size: 1.3rem;
+        .hero .tagline {
+            font-size: 1.5rem;
             font-weight: 500;
-            color: #1e4a6b;
-            margin: 20px 0 15px;
-            border-left: 6px solid #f59e0b;
-            padding-left: 20px;
-            background: #f9f9e6;
-            border-radius: 16px 16px 0 0;
-            line-height: 1.4;
+            color: #0a3b5c;
+            margin-bottom: 15px;
         }
-        .sub-tagline {
-            font-size: 1rem;
-            color: #2c3e50;
-            background: #f59e0b;
-            padding: 12px 20px;
-            border-radius: 60px;
-            display: inline-block;
-            margin-bottom: 30px;
+        .hero .subtagline {
+            font-size: 1.2rem;
+            color: #2d4a6e;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+        }
+        .keywords span {
+            background: #fef3c7;
+            color: #b45309;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
             font-weight: 500;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: #0a3b5c;
-            margin: 40px 0 20px;
-            border-bottom: 3px solid #f59e0b;
+            margin: 50px 0 20px 0;
+            border-bottom: none;
+            position: relative;
             display: inline-block;
-            padding-bottom: 6px;
+        }
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #f59e0b;
+            border-radius: 4px;
         }
         h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: #1e4a6b;
             margin: 30px 0 12px;
             font-weight: 600;
@@ -105,15 +116,15 @@
         .card {
             background: #f9f9ff;
             border-radius: 24px;
-            padding: 20px 28px;
+            padding: 24px 30px;
             margin-bottom: 28px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
             transition: all 0.2s ease;
             border: 1px solid #eef2f9;
         }
         .card:hover {
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-            transform: translateY(-3px);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
         }
         ul {
             padding-left: 28px;
@@ -122,49 +133,53 @@
         li {
             margin: 8px 0;
         }
-        .quote {
-            font-style: italic;
-            background: linear-gradient(120deg, #f8fafc, #ffffff);
-            padding: 28px;
-            border-radius: 28px;
-            margin: 40px 0;
-            border-left: 8px solid #f59e0b;
-            color: #1e2a3e;
-            font-size: 1.1rem;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.03);
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 20px 0;
         }
         .contact {
-            background: #0a3b5c;
-            padding: 32px;
+            background: linear-gradient(135deg, #0a3b5c, #0f4c6b);
+            padding: 40px;
             border-radius: 28px;
-            margin-top: 45px;
+            margin-top: 50px;
             color: white;
         }
         .contact h2 {
             color: white;
-            border-bottom-color: #f59e0b;
             margin-top: 0;
+        }
+        .contact h2:after {
+            background: #f59e0b;
         }
         .contact a {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 16px;
+            border-radius: 40px;
+            display: inline-block;
+            margin: 5px 8px 0 0;
         }
         .contact a:hover {
-            text-decoration: underline;
+            background: #f59e0b;
+            color: #0a3b5c;
         }
         footer {
             text-align: center;
             margin-top: 50px;
             padding: 24px;
-            border-top: 1px solid #cdd4d7;
-            font-weight: bold;
+            border-top: 1px solid #e2e8f0;
+            font-weight: 500;
+            font-size: 0.9rem;
         }
         @media (max-width: 700px) {
-            .container { padding: 24px; }
-            h1 { font-size: 1.8rem; }
-            .main-tagline { font-size: 1rem; }
-            .nav a { margin: 0 10px; font-size: 0.9rem; }
+            .container { padding: 30px 20px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero .tagline { font-size: 1.2rem; }
+            .nav a { margin: 0 12px; font-size: 0.9rem; }
         }
     </style>
     <script type="application/ld+json">
@@ -172,7 +187,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Ability Christopher",
-      "description": "Educator, Counsellor & Mentor empowering youth in Nigeria. Digital literacy, leadership, and personal development.",
+      "description": "Educator, Counsellor & Mentor empowering youth in Nigeria. Leadership development, digital literacy, financial education, and career guidance.",
       "url": "https://abilitychristopher.github.io",
       "sameAs": [
         "https://www.linkedin.com/in/ability-christopher",
@@ -184,9 +199,6 @@
 </head>
 <body>
 <div class="container">
-    <div class="profile-img">
-        <img src="ability-profile.png" alt="Ability Christopher">
-    </div>
     <div class="nav">
         <a href="https://abilitychristopher.github.io/">Home</a>
         <a href="services.html">Services</a>
@@ -194,102 +206,98 @@
         <a href="gallery.html">Gallery</a>
         <a href="blog.html">Blog</a>
     </div>
-    <h1>Hi, I'm Ability Christopher 😊</h1>
-    <div class="main-tagline">
-        Educator / Counselor / Mentor: Inspiring individuals into purpose, leadership and influence in today's world.
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Ability Christopher</h1>
+        <div class="tagline">Educator / Counsellor / Mentor</div>
+        <div class="subtagline">Inspiring individuals into purpose, leadership and influence in today's world.</div>
+        <div class="subtagline" style="font-size:1rem; margin-top:10px;">Empowering individuals through leadership development, digital literacy, financial education, career guidance, mentorship, and transformational speaking.</div>
+        <div class="keywords">
+            <span>Leadership Development</span>
+            <span>Digital Literacy Training</span>
+            <span>Financial Literacy Education</span>
+            <span>Personal Development</span>
+            <span>Public Speaking</span>
+            <span>Career Coaching</span>
+            <span>Youth Mentorship</span>
+            <span>Guidance and Counselling</span>
+            <span>Professional Development</span>
+            <span>Human Potential Development</span>
+        </div>
     </div>
-    <div class="sub-tagline">
-        Digital & Financial Advocate | Youth Development Enthusiast | Human Resources
-    </div>
-    <p>I am passionate about empowering people through education, mentorship, and leadership.</p>
-    <p>Currently serving in Benue State, Nigeria, where I contribute to community development.</p>
-    
-    <h2>Current Engagements</h2>
+
+    <!-- About Me -->
+    <h2>About Me</h2>
     <div class="card">
-        <h3>Ser-Av Foundation</h3>
-        <p>Working with an organization focused on empowering women and youth in the digital space.</p>
+        <p><strong>I am a purpose-driven leader, educator, digital literacy advocate, and financial literacy advocate</strong> passionate about unlocking human potential and helping individuals build meaningful, impactful lives.</p>
+        <p>With a background in Guidance and Counselling, I am committed to empowering young people and communities through mentorship, education, leadership development, career guidance, and transformational speaking.</p>
+        <p><strong>My work focuses on:</strong> Digital Literacy Training, Financial Literacy Education, Youth Empowerment, Personal Development, Leadership Development, Career Guidance & Counselling, Public Speaking & Communication, Community Impact Initiatives.</p>
+        <p>I currently serve under the NYSC programme where I actively facilitate digital literacy education through the <strong>NITDA DL4ALL initiative</strong>, helping bridge the digital divide among individuals in the informal sector.</p>
+        <p>I am also passionate about expanding financial literacy awareness for students and young professionals through educational outreach and advocacy initiatives. My long-term vision is to build platforms, programs, and initiatives that transform lives through education, leadership, technology, and purpose discovery.</p>
+    </div>
+
+    <!-- Professional Profile -->
+    <h2>Professional Profile</h2>
+    <div class="card">
+        <p><strong>Guidance and Counselling graduate</strong> with experience in education, youth mentorship, leadership, digital literacy facilitation, and community development.</p>
+        <p><strong>Experienced in:</strong> Leadership Training, Public Speaking, Digital Skills Training, Student Mentorship, Educational Program Development, Career Guidance, Communication & Facilitation, Team Leadership, Community Engagement, Microsoft Office & Data Handling.</p>
+        <p>Passionate about helping people discover purpose, maximize potential, and develop skills for personal and professional growth.</p>
+    </div>
+
+    <!-- Experience -->
+    <h2>Experience</h2>
+    <div class="card">
+        <h3>NYSC Digital Literacy Facilitator — NITDA DL4ALL</h3>
+        <p>Digital Literacy for All Initiative – Facilitating digital literacy training for individuals in the informal sector as part of a nationwide initiative aimed at increasing digital inclusion and technology awareness.</p>
+        <p><strong>Key Contributions:</strong> Digital skills training, Community digital education, Technology awareness campaigns, Basic computer literacy facilitation, Public engagement and communication, Team collaboration and outreach.</p>
+    </div>
+    <div class="card">
+        <h3>NYSC Community Development Service (CDS)</h3>
+        <p>Actively contributing to digital transformation and educational empowerment initiatives during national service.</p>
+    </div>
+    <div class="card">
+        <h3>Guidance and Counselling Practicum — Bill Merchant International School</h3>
+        <p>Completed a twelve-week practicum focused on: Student counselling, Educational guidance, Behavioural support, Programme development, School counselling services, Fieldwork documentation.</p>
+    </div>
+
+    <!-- Leadership -->
+    <h2>Leadership & Team Experience</h2>
+    <div class="card">
+        <h3>Platoon 04 Leader — NYSC Orientation Camp</h3>
+        <p>Led Platoon 04 during NYSC orientation camp activities and competitions.</p>
+        <p><strong>Achievements:</strong> AI Debate Competition — 2nd Place, Combat Marching Team — 1st Place, Volleyball Competition — 2nd Place, Cultural Carnival Display — 3rd Place, SAED Expozy Competition — 3rd Place.</p>
+        <p>Demonstrated: Leadership, Team coordination, Communication skills, Public engagement, Organizational ability.</p>
+    </div>
+
+    <!-- Mission -->
+    <h2>My Mission</h2>
+    <div class="card">
+        <p>To inspire growth, leadership, transformation, and purpose discovery by equipping individuals with the knowledge, mindset, digital skills, and financial awareness needed to thrive in a rapidly changing world.</p>
+    </div>
+
+    <!-- Areas of Interest -->
+    <h2>Areas of Interest</h2>
+    <div class="card">
         <ul>
-            <li>sensitization programs</li>
-            <li>advocacy</li>
-            <li>skills acquisition</li>
-            <li>community training initiatives</li>
-            <li>youth empowerment programs</li>
+            <li>Leadership Development</li><li>Personal Development</li><li>Public Speaking</li>
+            <li>Digital Literacy Advocacy</li><li>Financial Literacy Advocacy</li><li>Youth Empowerment</li>
+            <li>Career Development</li><li>Human Capacity Development</li><li>Educational Technology</li>
+            <li>Mentorship & Coaching</li><li>Community Development</li><li>Purpose Discovery</li>
+            <li>Transformational Education</li>
         </ul>
     </div>
-    <div class="card">
-        <h3>NITDA DL4ALL (Digital Literacy For All)</h3>
-        <p>Facilitating digital literacy training for members of the informal workforce.</p>
-    </div>
-    <div class="card">
-        <h3>Digital Marketing Training</h3>
-        <p>Currently building practical knowledge and skills in:</p>
-        <ul>
-            <li>digital branding</li>
-            <li>social media marketing</li>
-            <li>online communication</li>
-            <li>audience engagement</li>
-            <li>content promotion</li>
-            <li>digital growth strategies</li>
-        </ul>
-    </div>
-    
-    <h2>📚 Areas of Interest</h2>
-    <div class="card">
-        <ul>
-            <li>Public speaking</li>
-            <li>Human potential development</li>
-            <li>Guidance and counselling</li>
-            <li>Youth mentorship</li>
-            <li>Leadership development</li>
-            <li>Educational technology</li>
-            <li>Community development</li>
-            <li>Digital literacy</li>
-            <li>Advocacy and empowerment</li>
-        </ul>
-    </div>
-    
-    <h2>💡 Skills</h2>
-    <div class="card">
-        <ul>
-            <li>Communication</li>
-            <li>Public speaking</li>
-            <li>Counselling</li>
-            <li>Team leadership</li>
-            <li>Digital literacy facilitation</li>
-            <li>Community engagement</li>
-            <li>Microsoft Office</li>
-            <li>Data handling</li>
-            <li>Digital marketing fundamentals</li>
-        </ul>
-    </div>
-    
-    <h2>📚 Education</h2>
-    <div class="card">
-        <p><strong>Bachelor of Education (B.Ed.) – Guidance and Counselling</strong></p>
-    </div>
-    
-    <h2>📚 Leadership & NYSC Experience</h2>
-    <div class="card">
-        <p>Served as Platoon Leader during NYSC Orientation Camp and contributed to the team's success.</p>
-    </div>
-    
-    <h2>📚 Vision</h2>
-    <div class="card">
-        <p>To become a global voice for leadership, mentorship, transformation, and advocacy.</p>
-    </div>
-    
+
+    <!-- Contact Section -->
     <div class="contact">
         <h2>Connect with Me</h2>
-        <p><a href="https://www.linkedin.com/in/ability-christopher">LinkedIn</a></p>
-        <p><a href="https://www.instagram.com/christopher_ability">Instagram</a></p>
-        <p><a href="https://www.facebook.com/ability.christopher.5">Facebook</a></p>
-        <p><a href="mailto:abilityc86@gmail.com">abilityc86@gmail.com</a></p>
+        <p><a href="https://www.linkedin.com/in/ability-christopher">LinkedIn</a>
+        <a href="https://www.instagram.com/christopher_ability">Instagram</a>
+        <a href="https://www.facebook.com/ability.christopher.5">Facebook</a>
+        <a href="mailto:abilityc86@gmail.com">Email</a></p>
+        <p style="margin-top:20px;">I typically respond within 24 hours.</p>
     </div>
-    
-    <div class="quote">
-        "The greatest tragedy in life is not death, but life without purpose." - Aristotle
-    </div>
-    
+
     <footer>
         © 2026 Ability Christopher
     </footer>
