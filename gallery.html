@@ -4,137 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Ability Christopher</title>
+    <meta name="description" content="Photo gallery of events, training sessions, and community work by Ability Christopher.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f0f2f5;
+            font-family: 'Segoe UI', 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fc 0%, #e9eef5 100%);
             color: #1e2a3e;
             line-height: 1.6;
-            padding: 20px;
+            padding: 40px 20px;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
             background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 32px;
+            padding: 50px 40px;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.08);
         }
         .nav {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             padding-bottom: 15px;
-            border-bottom: 1px solid #cbd5e1;
+            border-bottom: 2px solid #e2e8f0;
         }
         .nav a {
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
-            color: #0a3b5c;
-            font-weight: bold;
+            color: #1e4a6b;
+            font-weight: 600;
+            transition: color 0.2s;
         }
-        .nav a:hover {
-            text-decoration: underline;
-        }
+        .nav a:hover { color: #f59e0b; }
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #0a3b5c;
             margin-bottom: 10px;
         }
-        .intro {
-            margin-bottom: 30px;
-            background: #e9f0f5;
-            padding: 20px;
-            border-radius: 16px;
+        .sub {
+            color: #4b5563;
+            margin-bottom: 40px;
         }
-        .gallery {
+        .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
         }
         .gallery-item {
-            background: #f8fafc;
-            border-radius: 16px;
+            background: #f9f9ff;
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
         }
         .gallery-item img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
             display: block;
         }
         .caption {
             padding: 15px;
-            font-size: 0.95rem;
-            color: #1e2a3e;
-            background: white;
+            font-size: 0.9rem;
+            color: #1e4a6b;
+            text-align: center;
+            font-weight: 500;
         }
         footer {
             text-align: center;
-            margin-top: 45px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
+            margin-top: 50px;
+            padding-top: 24px;
+            border-top: 1px solid #e2e8f0;
             font-size: 0.9rem;
-            color: #5c6f87;
         }
-        @media (max-width: 600px) {
-            .container { padding: 20px; }
-            .gallery { gap: 15px; }
+        @media (max-width: 700px) {
+            .container { padding: 30px 20px; }
+            h1 { font-size: 1.8rem; }
+            .nav a { margin: 0 12px; font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
-
 <div class="container">
     <div class="nav">
         <a href="https://abilitychristopher.github.io/">Home</a>
         <a href="services.html">Services</a>
         <a href="connect.html">Connect</a>
         <a href="gallery.html">Gallery</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
     </div>
 
-    <h1>📸 Community Impact Gallery</h1>
+    <h1>📸 Gallery</h1>
+    <div class="sub">Moments from training sessions, community outreach, and leadership events</div>
 
-    <div class="intro">
-        <p><strong>Ser‑Av Foundation – Strategy Presentation</strong><br>
-        I recently led a session analyzing our core challenges to improve efficiency. We identified gaps in three key areas:</p>
-        <ul>
-            <li><strong>Operations:</strong> Communication and financial costs</li>
-            <li><strong>Institutions:</strong> Lack of reliable partnerships</li>
-            <li><strong>Human Resources:</strong> Personnel and expertise shortages</li>
-        </ul>
-        <p>Grateful to work with a team that embraces critical feedback to fuel our mission.</p>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300?text=Digital+Literacy+Training" alt="Digital literacy training by Ability Christopher">
+            <div class="caption">Digital literacy training – Benue State</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300?text=Ser-Av+Strategy+Session" alt="Ser-Av Foundation strategy presentation">
+            <div class="caption">Leading strategy session at Ser-Av Foundation</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300?text=Youth+Mentorship+Event" alt="Youth mentorship event">
+            <div class="caption">Youth mentorship & career guidance event</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300?text=NYSC+Leadership" alt="NYSC Platoon leadership">
+            <div class="caption">NYSC Platoon 04 – Leadership in action</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300?text=Community+Outreach" alt="Community outreach">
+            <div class="caption">Community sensitization programme</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://via.placeholder.com/400x300?text=Speaking+Engagement" alt="Public speaking event">
+            <div class="caption">Public speaking on purpose & leadership</div>
+        </div>
     </div>
 
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="serav-1.jpg" alt="Presentation at Ser-Av Foundation">
-            <div class="caption">📊 Breaking down operational challenges – communication & financial costs.</div>
-        </div>
-        <div class="gallery-item">
-            <img src="serav-2.jpg" alt="Team discussing institutional partnerships">
-            <div class="caption">🤝 Addressing the lack of reliable institutional partnerships.</div>
-        </div>
-        <div class="gallery-item">
-            <img src="serav-3.jpg" alt="Human resources and expertise gaps">
-            <div class="caption">🧠 Identifying personnel and expertise shortages – and solutions.</div>
-        </div>
-        <div class="gallery-item">
-            <img src="serav-4.jpg" alt="Group photo after the session">
-            <div class="caption">🌟 The Ser‑Av team: committed to growth and community impact.</div>
-        </div>
-    </div>
-
-    <footer>
-        © 2026 Ability Christopher — Serving communities through honest analysis and action.
-    </footer>
+    <footer>© 2026 Ability Christopher – Capturing impact, one moment at a time</footer>
 </div>
-
 </body>
 </html>
