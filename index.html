@@ -20,8 +20,7 @@
         .container {
             max-width: 1100px;
             margin: auto;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(2px);
+            background: white;
             border-radius: 32px;
             padding: 40px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -45,16 +44,27 @@
         }
         .nav a:hover {
             color: #f59e0b;
-            text-decoration: underline;
+        }
+        .profile-img {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-img img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #f59e0b;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         h1 {
             font-size: 2.5rem;
+            text-align: center;
             background: linear-gradient(120deg, #0a3b5c, #1e4a6b);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
             margin-bottom: 20px;
-            text-align: center;
         }
         .main-tagline {
             font-size: 1.3rem;
@@ -92,7 +102,7 @@
             font-weight: 600;
         }
         .card {
-            background: white;
+            background: #f9f9ff;
             border-radius: 24px;
             padding: 20px 28px;
             margin-bottom: 28px;
@@ -109,7 +119,7 @@
             margin: 15px 0;
         }
         li {
-            margin: 10px 0;
+            margin: 8px 0;
         }
         .quote {
             font-style: italic;
@@ -162,17 +172,19 @@
 <body>
 
 <div class="container">
-    <img src="ability-profile.png" alt="Ability Christopher" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #f59e0b; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-</div>
-    <div class="nav">
-    <a href="https://abilitychristopher.github.io/">Home</a>
-    <a href="services.html">Services</a>
-    <a href="connect.html">Connect</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-</div>
+    <div class="profile-img">
+        <img src="ability-profile.png" alt="Ability Christopher">
+    </div>
 
-    <h1>Hi, I'm Ability Christopher 👋</h1>
+    <div class="nav">
+        <a href="https://abilitychristopher.github.io/">Home</a>
+        <a href="services.html">Services</a>
+        <a href="connect.html">Connect</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+    </div>
+
+    <h1>Hi, I'm Ability Christopher 🎓</h1>
 
     <div class="main-tagline">
         Educator / Counsellor / Mentor: Inspiring individuals into purpose, leadership and influence in today's world.
@@ -187,64 +199,80 @@
 
     <h2>🌍 Current Engagements</h2>
 
-    <h3>Ser-Av Foundation</h3>
-    <p>Working with an organization focused on empowering women and youth through:</p>
-    <ul>
-        <li>sensitization programs</li>
-        <li>advocacy</li>
-        <li>skills acquisition</li>
-        <li>community training initiatives</li>
-        <li>youth empowerment programs</li>
-    </ul>
+    <div class="card">
+        <h3>Ser-Av Foundation</h3>
+        <p>Working with an organization focused on empowering women and youth through:</p>
+        <ul>
+            <li>sensitization programs</li>
+            <li>advocacy</li>
+            <li>skills acquisition</li>
+            <li>community training initiatives</li>
+            <li>youth empowerment programs</li>
+        </ul>
+    </div>
 
-    <h3>NITDA DL4ALL (Digital Literacy For All)</h3>
-    <p>Facilitating digital literacy training for members of the informal sector as part of a national digital inclusion initiative.</p>
+    <div class="card">
+        <h3>NITDA DL4ALL (Digital Literacy For All)</h3>
+        <p>Facilitating digital literacy training for members of the informal sector as part of a national digital inclusion initiative.</p>
+    </div>
 
-    <h3>Digital Marketing Training</h3>
-    <p>Currently building practical knowledge and skills in:</p>
-    <ul>
-        <li>digital branding</li>
-        <li>social media marketing</li>
-        <li>online communication</li>
-        <li>audience engagement</li>
-        <li>content promotion</li>
-        <li>digital growth strategies</li>
-    </ul>
+    <div class="card">
+        <h3>Digital Marketing Training</h3>
+        <p>Currently building practical knowledge and skills in:</p>
+        <ul>
+            <li>digital branding</li>
+            <li>social media marketing</li>
+            <li>online communication</li>
+            <li>audience engagement</li>
+            <li>content promotion</li>
+            <li>digital growth strategies</li>
+        </ul>
+    </div>
 
     <h2>🎯 Areas of Interest</h2>
-    <ul>
-        <li>Public speaking</li>
-        <li>Human potential development</li>
-        <li>Guidance and counselling</li>
-        <li>Youth mentorship</li>
-        <li>Leadership development</li>
-        <li>Educational technology</li>
-        <li>Community development</li>
-        <li>Digital literacy</li>
-        <li>Advocacy and empowerment</li>
-    </ul>
+    <div class="card">
+        <ul>
+            <li>Public speaking</li>
+            <li>Human potential development</li>
+            <li>Guidance and counselling</li>
+            <li>Youth mentorship</li>
+            <li>Leadership development</li>
+            <li>Educational technology</li>
+            <li>Community development</li>
+            <li>Digital literacy</li>
+            <li>Advocacy and empowerment</li>
+        </ul>
+    </div>
 
     <h2>🛠️ Skills</h2>
-    <ul>
-        <li>Communication</li>
-        <li>Public speaking</li>
-        <li>Counselling</li>
-        <li>Team leadership</li>
-        <li>Digital literacy facilitation</li>
-        <li>Community engagement</li>
-        <li>Microsoft Office</li>
-        <li>Data handling</li>
-        <li>Digital marketing fundamentals</li>
-    </ul>
+    <div class="card">
+        <ul>
+            <li>Communication</li>
+            <li>Public speaking</li>
+            <li>Counselling</li>
+            <li>Team leadership</li>
+            <li>Digital literacy facilitation</li>
+            <li>Community engagement</li>
+            <li>Microsoft Office</li>
+            <li>Data handling</li>
+            <li>Digital marketing fundamentals</li>
+        </ul>
+    </div>
 
     <h2>📚 Education</h2>
-    <p><strong>Bachelor of Education (B.Ed.) — Guidance and Counselling</strong><br>Second Class Upper Division</p>
+    <div class="card">
+        <p><strong>Bachelor of Education (B.Ed.) — Guidance and Counselling</strong><br>Second Class Upper Division</p>
+    </div>
 
     <h2>🏆 Leadership & NYSC Experience</h2>
-    <p>Served as Platoon Leader during NYSC Orientation Camp and contributed to multiple award-winning team activities including debate, cultural events, sports, and parade competitions.</p>
+    <div class="card">
+        <p>Served as Platoon Leader during NYSC Orientation Camp and contributed to multiple award-winning team activities including debate, cultural events, sports, and parade competitions.</p>
+    </div>
 
     <h2>🚀 Vision</h2>
-    <p>To become a global voice for leadership, mentorship, transformation, youth empowerment, and human potential development.</p>
+    <div class="card">
+        <p>To become a global voice for leadership, mentorship, transformation, youth empowerment, and human potential development.</p>
+    </div>
 
     <div class="contact">
         <h2>📫 Connect With Me</h2>
