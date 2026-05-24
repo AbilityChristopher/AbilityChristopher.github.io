@@ -56,6 +56,7 @@
             overflow: hidden;
             box-shadow: 0 8px 20px rgba(0,0,0,0.05);
             transition: transform 0.2s;
+            cursor: pointer;
         }
         .gallery-item:hover {
             transform: translateY(-5px);
@@ -73,6 +74,35 @@
             color: #1e4a6b;
             text-align: center;
             font-weight: 500;
+        }
+        /* Lightbox modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
         }
         footer {
             text-align: center;
@@ -100,7 +130,7 @@
     </div>
 
     <h1>📸 Gallery</h1>
-    <div class="sub">Strategy sessions, NYSC milestones, and digital literacy in action</div>
+    <div class="sub">Click any image to view larger</div>
 
     <div class="gallery-grid">
         <!-- === Strategy Presentation Images (6) === -->
@@ -152,8 +182,7 @@
             <div class="caption">Platoon leader and team victory – NYSC camp achievements</div>
         </div>
 
-        <!-- === NITDA DL4ALL Training Photos (6) – Add your images named: -->
-        <!-- Ability-christopher-NITDA1.jpg to Ability-christopher-NITDA6.jpg -->
+        <!-- === NITDA DL4ALL Training Photos (6) === -->
         <div class="gallery-item">
             <img src="images/Ability-christopher-NITDA1.jpg" alt="Digital literacy training - NITDA DL4ALL">
             <div class="caption">Empowering communities through digital literacy – NITDA DL4ALL training</div>
@@ -182,5 +211,37 @@
 
     <footer>© 2026 Ability Christopher – Capturing impact, one moment at a time</footer>
 </div>
+
+<!-- Lightbox Modal -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="">
+</div>
+
+<script>
+    // Add click listener to every gallery image
+    const images = document.querySelectorAll('.gallery-item img');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+
+    images.forEach(img => {
+        img.addEventListener('click', function(e) {
+            e.stopPropagation();
+            modal.style.display = 'flex';
+            modalImg.src = this.src;
+        });
+    });
+
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    // Close modal when pressing Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+</script>
 </body>
 </html>
