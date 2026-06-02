@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Ability Christopher</title>
-    <meta name="description" content="Photo gallery of strategy presentations, NYSC milestones, and digital literacy training by Ability Christopher.">
+    <title>Impact & Community Engagement | Ability Christopher</title>
+    <meta name="description" content="Photos of community impact, strategy sessions, NYSC milestones, and digital literacy training by Ability Christopher.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -75,7 +75,7 @@
             text-align: center;
             font-weight: 500;
         }
-        /* Lightbox modal styles */
+        /* Lightbox modal */
         .modal {
             display: none;
             position: fixed;
@@ -124,16 +124,19 @@
         <a href="https://abilitychristopher.github.io/">Home</a>
         <a href="services.html">Services</a>
         <a href="connect.html">Connect</a>
-        <a href="gallery.html">Gallery</a>
+        <a href="gallery.html">Impact & Community</a>
         <a href="projects.html">Projects</a>
         <a href="blog.html">Blog</a>
     </div>
 
-    <h1>📸 Gallery</h1>
-    <div class="sub">Click any image to view larger</div>
+    <h1>🌟 Impact & Community Engagement</h1>
+    <div class="sub">Strategy sessions, NYSC milestones, and digital literacy in action – click any image to view larger</div>
 
     <div class="gallery-grid">
-        <!-- === Strategy Presentation Images (6) === -->
+        <!-- === Strategy Presentation Images (7) === -->
+        <div class="gallery-item">
+            <img src="images/Ability-christopher-strategy%20presentation.jpg" alt="Ser-Av Foundation Strategy Presentation">
+            <div class="caption">Ser-Av Foundation Strategy Presentation</div>
         </div>
         <div class="gallery-item">
             <img src="images/Ability-christopher-strategy%20presentation%201.jpg" alt="Ser-Av Foundation Strategy Presentation">
@@ -219,7 +222,6 @@
 </div>
 
 <script>
-    // Add click listener to every gallery image
     const images = document.querySelectorAll('.gallery-item img');
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
@@ -236,7 +238,6 @@
         modal.style.display = 'none';
     }
 
-    // Close modal when pressing Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.style.display === 'flex') {
             closeModal();
