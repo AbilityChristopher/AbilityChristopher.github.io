@@ -1,192 +1,876 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Ability Christopher – Community Impact & Youth Development</title>
-    <meta name="description" content="Community impact projects by Ability Christopher: digital literacy, financial literacy outreach, youth mentorship, and organisational strategy.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fc 0%, #e9eef5 100%);
-            color: #1e2a3e;
-            line-height: 1.7;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            background: white;
-            border-radius: 32px;
-            padding: 50px 40px;
-            box-shadow: 0 30px 50px rgba(0,0,0,0.08);
-        }
-        .nav {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #e2e8f0;
-        }
-        .nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #1e4a6b;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-        .nav a:hover { color: #f59e0b; }
-        h1 {
-            font-size: 2.5rem;
-            color: #0a3b5c;
-            margin-bottom: 10px;
-        }
-        .sub {
-            color: #4b5563;
-            margin-bottom: 40px;
-        }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
-        }
-        .project-card {
-            background: #f9f9ff;
-            border-radius: 24px;
-            padding: 25px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            transition: all 0.2s ease;
-            border: 1px solid #eef2f9;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
-        }
-        .project-card h2 {
-            font-size: 1.6rem;
-            color: #0a3b5c;
-            margin-bottom: 15px;
-            border-left: 4px solid #f59e0b;
-            padding-left: 15px;
-        }
-        .project-card h3 {
-            font-size: 1.2rem;
-            color: #1e4a6b;
-            margin: 20px 0 10px;
-        }
-        .project-card ul, .project-card p {
-            margin-bottom: 12px;
-        }
-        .project-card li {
-            margin-left: 20px;
-            margin-bottom: 6px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 24px;
-            border-top: 1px solid #e2e8f0;
-            font-size: 0.9rem;
-        }
-        @media (max-width: 700px) {
-            .container { padding: 30px 20px; }
-            h1 { font-size: 1.8rem; }
-            .nav a { margin: 0 12px; font-size: 0.9rem; }
-            .projects-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Community impact projects by Ability Christopher — digital literacy, financial literacy, youth counselling, and NGO development work in Nigeria." />
+  <title>Impact & Projects | Ability Christopher</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink: #0f0f0f;
+      --paper: #f7f4ef;
+      --gold: #b8922a;
+      --gold-light: #d4aa4a;
+      --warm-mid: #e8e2d9;
+      --muted: #7a7065;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 5%;
+      background: rgba(247, 244, 239, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--warm-mid);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--gold); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: var(--ink);
+      padding: 9rem 5% 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: 'IMPACT';
+      position: absolute;
+      right: 2%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(5rem, 14vw, 13rem);
+      font-weight: 700;
+      color: rgba(255,255,255,0.03);
+      letter-spacing: 0.05em;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .page-header-inner { max-width: 1200px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+
+    .page-subtitle {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      max-width: 560px;
+      line-height: 1.8;
+    }
+
+    /* ── IMPACT NUMBERS ── */
+    .numbers-strip {
+      background: var(--gold);
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .number-item {
+      flex: 1;
+      min-width: 160px;
+      text-align: center;
+      padding: 2.5rem 2rem;
+      border-right: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .number-item:last-child { border-right: none; }
+
+    .number-big {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      display: block;
+    }
+
+    .number-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      margin-top: 0.4rem;
+      display: block;
+    }
+
+    /* ── INTRO ── */
+    .intro {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 5% 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .intro-left {
+      position: sticky;
+      top: 7rem;
+    }
+
+    .intro-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    .intro-right p {
+      font-size: 1.05rem;
+      color: #3a3530;
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 1.2rem;
+    }
+
+    .intro-right p strong {
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    /* ── PROJECTS ── */
+    .projects-list {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 5% 6rem;
+    }
+
+    .project-block {
+      padding: 5rem 0;
+      border-top: 1px solid var(--warm-mid);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .project-block:last-child { border-bottom: 1px solid var(--warm-mid); }
+
+    .project-left {
+      position: sticky;
+      top: 7rem;
+    }
+
+    .project-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      font-weight: 700;
+      color: var(--warm-mid);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .project-icon {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+
+    .project-org {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .project-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }
+
+    .project-location {
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .project-right p {
+      font-size: 1rem;
+      color: #3a3530;
+      font-weight: 300;
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Three-column context block */
+    .context-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1px;
+      background: var(--warm-mid);
+      margin-bottom: 2rem;
+    }
+
+    .context-col {
+      background: var(--paper);
+      padding: 1.2rem 1.3rem;
+    }
+
+    .context-col-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .context-col-value {
+      font-size: 0.88rem;
+      color: var(--ink);
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* What I did */
+    .what-i-did {
+      margin-bottom: 2rem;
+    }
+
+    .subsection-title {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .did-list {
+      list-style: none;
+    }
+
+    .did-list li {
+      font-size: 0.93rem;
+      color: #3a3530;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--warm-mid);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      font-weight: 300;
+    }
+
+    .did-list li::before {
+      content: '→';
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    .did-list li:last-child { border-bottom: none; }
+
+    /* Results */
+    .results-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .result-chip {
+      background: var(--ink);
+      color: var(--white);
+      padding: 0.6rem 1.2rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .result-chip .chip-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+
+    /* ── COMING SOON ── */
+    .coming-soon {
+      background: var(--warm-mid);
+      padding: 5rem 5%;
+    }
+
+    .coming-soon-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .coming-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 2rem;
+    }
+
+    .coming-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .coming-card {
+      background: var(--paper);
+      border: 1px solid rgba(0,0,0,0.07);
+      padding: 1.8rem;
+      border-top: 3px solid var(--gold);
+      opacity: 0.75;
+    }
+
+    .coming-tag {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .coming-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .coming-card-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ── CTA ── */
+    .cta {
+      background: var(--gold);
+      padding: 6rem 5%;
+      text-align: center;
+    }
+
+    .cta-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--gold);
+      padding: 0.9rem 2.2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity 0.2s;
+    }
+
+    .btn-white:hover { opacity: 0.88; }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      padding: 0.9rem 2.2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.5);
+      display: inline-block;
+      transition: background 0.2s;
+    }
+
+    .btn-ghost:hover { background: rgba(255,255,255,0.15); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0a0a0a;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 2.5rem 5%;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+    }
+
+    footer a { color: var(--gold-light); text-decoration: none; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      nav .nav-links { display: none; }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-top: 3rem;
+      }
+
+      .intro-left { position: static; }
+
+      .project-block {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 0;
+      }
+
+      .project-left { position: static; }
+
+      .context-cols { grid-template-columns: 1fr; }
+
+      .number-item { min-width: 140px; }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-    <div class="nav">
-        <a href="https://abilitychristopher.github.io/">Home</a>
-        <a href="services.html">Services</a>
-        <a href="connect.html">Connect</a>
-        <a href="gallery.html">Impact & Community</a>
-        <a href="projects.html">Projects</a>
-        <a href="blog.html">Blog</a>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/index.html" class="nav-logo">Ability Christopher</a>
+    <ul class="nav-links">
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/index.html#speaking">Speaking</a></li>
+      <li><a href="/projects.html" class="active">Impact</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/connect.html">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <span class="section-label">Work in the Field</span>
+      <h1 class="page-title">Impact & Projects</h1>
+      <p class="page-subtitle">Real initiatives. Real communities. Real results. Here is a record of the work I have done — and the people it has touched.</p>
+    </div>
+  </header>
+
+  <!-- NUMBERS STRIP -->
+  <div class="numbers-strip">
+    <div class="number-item">
+      <span class="number-big">500+</span>
+      <span class="number-label">Individuals Trained</span>
+    </div>
+    <div class="number-item">
+      <span class="number-big">50+</span>
+      <span class="number-label">Students Mentored</span>
+    </div>
+    <div class="number-item">
+      <span class="number-big">100+</span>
+      <span class="number-label">Financial Literacy Reached</span>
+    </div>
+    <div class="number-item">
+      <span class="number-big">30%</span>
+      <span class="number-label">Operational Improvement</span>
+    </div>
+    <div class="number-item">
+      <span class="number-big">6+</span>
+      <span class="number-label">Communities Served</span>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro">
+    <div class="intro-left">
+      <h2 class="intro-title">Purpose is proven in the field.</h2>
+    </div>
+    <div class="intro-right">
+      <p>I believe that <strong>impact is not something you claim — it is something you demonstrate.</strong> Every project on this page represents a real community I walked into, a real problem I engaged with, and real people whose lives were touched in some way by the work.</p>
+      <p>These are not theoretical exercises. They are field-tested programmes — delivered in classrooms, community halls, NGO offices, and school grounds across Benue State and beyond.</p>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="projects-list">
+
+    <!-- PROJECT 1: NITDA DL4ALL -->
+    <div class="project-block">
+      <div class="project-left">
+        <div class="project-number">01</div>
+        <span class="project-icon">💻</span>
+        <span class="project-org">NITDA DL4ALL Initiative</span>
+        <h2 class="project-title">Digital Literacy for All</h2>
+        <p class="project-location">📍 Benue State, Nigeria</p>
+      </div>
+      <div class="project-right">
+        <div class="context-cols">
+          <div class="context-col">
+            <span class="context-col-label">Role</span>
+            <span class="context-col-value">Certified DL4ALL Facilitator</span>
+          </div>
+          <div class="context-col">
+            <span class="context-col-label">Period</span>
+            <span class="context-col-value">2025 – 2026</span>
+          </div>
+          <div class="context-col">
+            <span class="context-col-label">Focus</span>
+            <span class="context-col-value">Digital inclusion for informal sector workers</span>
+          </div>
+        </div>
+
+        <p>The NITDA Digital Literacy For All (DL4ALL) programme is a federal government-backed initiative to bring basic digital skills to Nigerians who have been left behind by the digital economy — particularly those in the informal sector who use feature phones, run small businesses, or have never received formal digital training.</p>
+
+        <p>As a certified facilitator, I designed and delivered practical, jargon-free workshops that met people where they were — covering everything from basic smartphone use to mobile banking, online safety, and using digital tools for everyday life and business.</p>
+
+        <div class="what-i-did">
+          <span class="subsection-title">What I Did</span>
+          <ul class="did-list">
+            <li>Delivered structured digital literacy workshops to individuals in the informal sector</li>
+            <li>Covered basic ICT: smartphone navigation, email, internet browsing, and online communication</li>
+            <li>Facilitated sessions on mobile banking, digital payments, and financial app safety</li>
+            <li>Taught online scam awareness, data privacy, and digital security basics</li>
+            <li>Introduced participants to social media for small business and personal branding</li>
+            <li>Adapted training delivery for participants with no prior digital exposure</li>
+          </ul>
+        </div>
+
+        <div class="results-row">
+          <div class="result-chip"><span class="chip-number">500+</span> Individuals Trained</div>
+          <div class="result-chip"><span class="chip-number">✓</span> Federal Initiative</div>
+          <div class="result-chip"><span class="chip-number">✓</span> Informal Sector Focus</div>
+        </div>
+      </div>
     </div>
 
-    <h1>📌 Community Projects</h1>
-    <div class="sub">In‑depth looks at initiatives I’ve led or contributed to</div>
-
-    <div class="projects-grid">
-        <!-- Project 1: Ser-Av Foundation Strategy -->
-        <div class="project-card">
-            <h2>Ser-Av Foundation – Strategy Refinement</h2>
-            <p><strong>Role:</strong> Lead facilitator & strategic analyst</p>
-            <p><strong>Challenge:</strong> The organisation faced inefficiencies in three key areas: operations, institutional partnerships, and human resources.</p>
-            <h3>Key Gaps Identified</h3>
-            <ul>
-                <li><strong>Operations:</strong> Communication breakdowns and high financial costs</li>
-                <li><strong>Institutions:</strong> Lack of reliable, long‑term partnerships</li>
-                <li><strong>Human Resources:</strong> Shortage of personnel and expertise</li>
-            </ul>
-            <h3>Solution Approach</h3>
-            <p>Led a two‑day strategy workshop using gap analysis and root‑cause mapping. Developed actionable recommendations for each area.</p>
-            <h3>Impact</h3>
-            <p>The team adopted new communication protocols, partnership criteria, and a phased recruitment plan. Early results showed a 30% reduction in operational friction.</p>
+    <!-- PROJECT 2: KAFI Financial Literacy -->
+    <div class="project-block">
+      <div class="project-left">
+        <div class="project-number">02</div>
+        <span class="project-icon">💰</span>
+        <span class="project-org">KAFI Foundation</span>
+        <h2 class="project-title">Financial Literacy Leadership Programme</h2>
+        <p class="project-location">📍 Benue State, Nigeria</p>
+      </div>
+      <div class="project-right">
+        <div class="context-cols">
+          <div class="context-col">
+            <span class="context-col-label">Role</span>
+            <span class="context-col-value">Financial Literacy Fellow & Outreach Facilitator</span>
+          </div>
+          <div class="context-col">
+            <span class="context-col-label">Period</span>
+            <span class="context-col-value">2025 – 2026</span>
+          </div>
+          <div class="context-col">
+            <span class="context-col-label">Focus</span>
+            <span class="context-col-value">Financial education for secondary school students</span>
+          </div>
         </div>
 
-        <!-- Project 2: NITDA DL4ALL Digital Literacy (UPDATED) -->
-<div class="project-card">
-    <h2>NITDA DL4ALL – Digital Literacy for the Informal Sector</h2>
-    <p><strong>Role:</strong> Certified Digital Champion & Field Facilitator</p>
-    <p><strong>National Goal:</strong> Contributing to Nigeria's ambitious target of achieving 70% digital literacy by 2027 as part of the Digital Literacy for All (DL4ALL) initiative, a presidential mandate.</p>
-    <h3>Target Audience & Outreach</h3>
-    <p>Taking digital literacy directly to where people live and work. As part of a nationwide team, I've helped train over 500+ individuals, including:</p>
-    <ul>
-        <li><strong>Informal Sector Workers:</strong> Market women, traders, and artisans in local markets</li>
-        <li><strong>Rural Communities:</strong> Farmers, pedestrians, and residents in underserved areas</li>
-        <li><strong>Young Learners:</strong> School children and out-of-school youth</li>
-        <li><strong>Vulnerable Groups:</strong> Senior citizens and others at risk of digital exclusion</li>
-    </ul>
-    <h3>Training Delivery</h3>
-    <ul>
-        <li>Conducted one-on-one and group training sessions in marketplaces, community hubs, and public spaces</li>
-        <li>Taught foundational modules: device operation, internet navigation, online safety, and digital communication</li>
-        <li>Adapted training to different literacy levels and learning paces</li>
-        <li>Provided post-training support to reinforce digital confidence</li>
-    </ul>
-    <h3>Impact</h3>
-    <p>Participants gained practical skills such as using mobile banking, accessing government services online, and identifying online fraud risks. Many reported increased confidence in using digital tools for daily transactions and business activities.</p>
-    <p><em>Being part of a movement where digital champions are reaching citizens in motor parks, religious places, and village squares—ensuring no one is left behind in Nigeria's digital transformation.</em></p>
-</div>
+        <p>As a graduate of the KAFI Financial Literacy Leadership Fellowship, I participated in structured training on financial education, leadership development, and community financial empowerment — then took that knowledge into secondary schools across Benue State.</p>
 
-        <!-- Project 3: Youth Mentorship & Career Guidance -->
-        <div class="project-card">
-            <h2>Youth Mentorship & Career Guidance</h2>
-            <p><strong>Role:</strong> Mentor & workshop facilitator</p>
-            <p><strong>Context:</strong> Many secondary school leavers in Benue State lack career direction and mentorship.</p>
-            <h3>Approach</h3>
-            <ul>
-                <li>Conducted career assessment sessions</li>
-                <li>Led group discussions on goal setting and skill development</li>
-                <li>Connected participants with online learning resources</li>
-            </ul>
-            <h3>Results</h3>
-            <p>Over 50 students received personalised guidance. Feedback showed increased clarity about future education and career choices.</p>
+        <p>The gap is real: most Nigerian students leave secondary school without ever being taught how to manage money, understand income, or think about financial futures. My outreach sessions worked to begin closing that gap — one school at a time.</p>
+
+        <div class="what-i-did">
+          <span class="subsection-title">What I Did</span>
+          <ul class="did-list">
+            <li>Completed the Financial Literacy Leadership Fellowship with KAFI Foundation</li>
+            <li>Designed and delivered age-appropriate financial literacy sessions for secondary students</li>
+            <li>Taught budgeting, saving habits, and understanding income vs expenses</li>
+            <li>Facilitated discussions on financial goal-setting and long-term money thinking</li>
+            <li>Delivered sessions on avoiding financial scams, debt traps, and peer pressure spending</li>
+            <li>Introduced basic entrepreneurship and income generation concepts</li>
+          </ul>
         </div>
 
-        <!-- Project 4: KAFI Foundation – Financial Literacy Competition (NEW) -->
-        <div class="project-card">
-            <h2>KAFI Foundation – Kafipedia Pan-Africa Financial Literacy Competition</h2>
-            <p><strong>Role:</strong> Facilitator & Financial Literacy Champion</p>
-            <p><strong>Objective:</strong> Equip secondary school students with practical financial knowledge – budgeting, saving, investing, and financial discipline – through an interactive competition format.</p>
-            <h3>My Contribution</h3>
-            <ul>
-                <li>Delivered financial literacy training sessions to students preparing for the competition</li>
-                <li>Taught core concepts: goal‑based saving, avoiding debt traps, and smart spending habits</li>
-                <li>Mentored participants on how financial literacy connects to career and life goals</li>
-                <li>Collaborated with KAFI team to design engaging learning materials</li>
-            </ul>
-            <h3>Outcome & Impact</h3>
-            <p>Students demonstrated improved understanding of budgeting and savings. Several participants reported applying the lessons to manage their pocket money and set savings goals. The competition environment boosted confidence and interest in financial independence.</p>
-            <p><em>“Now I know why I should save before spending.”</em> – Student participant</p>
+        <div class="results-row">
+          <div class="result-chip"><span class="chip-number">100+</span> Students Reached</div>
+          <div class="result-chip"><span class="chip-number">✓</span> Fellowship Graduate</div>
+          <div class="result-chip"><span class="chip-number">✓</span> School Outreach</div>
         </div>
+      </div>
     </div>
 
-    <footer>© 2026 Ability Christopher – Building impact, one project at a time</footer>
-</div>
+    <!-- PROJECT 3: Ser-Av Foundation -->
+    <div class="project-block">
+      <div class="project-left">
+        <div class="project-number">03</div>
+        <span class="project-icon">🏢</span>
+        <span class="project-org">Ser-Av Foundation</span>
+        <h2 class="project-title">NGO Strategy & Youth Empowerment</h2>
+        <p class="project-location">📍 Makurdi, Benue State</p>
+      </div>
+      <div class="project-right">
+        <div class="context-cols">
+          <div class="context-col">
+            <span class="context-col-label">Role</span>
+            <span class="context-col-value">NYSC Primary Assignment — Development Worker</span>
+          </div>
+          <div class="context-col">
+            <span class="context-col-label">Period</span>
+            <span class="context-col-value">2025 – 2026</span>
+          </div>
+          <div class="context-col">
+            <span class="context-col-label">Focus</span>
+            <span class="context-col-value">Community development & organisational strategy</span>
+          </div>
+        </div>
+
+        <p>Ser-Av Foundation is a community-focused NGO operating in Benue State. As my NYSC primary assignment, I was embedded within the organisation to contribute to its community development programmes — and quickly expanded my role to include strategic input that improved how the organisation operated.</p>
+
+        <p>Beyond administrative and community work, I identified inefficiencies in the organisation's internal processes and led a strategy session that resulted in measurable improvement in their operational efficiency — a 30% reduction in friction across key workflows.</p>
+
+        <div class="what-i-did">
+          <span class="subsection-title">What I Did</span>
+          <ul class="did-list">
+            <li>Served as a development worker contributing to community engagement programmes</li>
+            <li>Facilitated a strategy and process improvement workshop for the organisation's team</li>
+            <li>Identified and addressed key bottlenecks in operational workflows</li>
+            <li>Supported digital literacy sessions for community members and women's groups</li>
+            <li>Participated in youth empowerment and counselling outreach activities</li>
+            <li>Contributed to programme planning and documentation for community initiatives</li>
+          </ul>
+        </div>
+
+        <div class="results-row">
+          <div class="result-chip"><span class="chip-number">30%</span> Operational Improvement</div>
+          <div class="result-chip"><span class="chip-number">✓</span> Strategy Workshop Led</div>
+          <div class="result-chip"><span class="chip-number">✓</span> NGO Environment</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 4: MHM Outreach -->
+    <div class="project-block">
+      <div class="project-left">
+        <div class="project-number">04</div>
+        <span class="project-icon">🩸</span>
+        <span class="project-org">Community Health Outreach</span>
+        <h2 class="project-title">Menstrual Hygiene Management Sensitisation</h2>
+        <p class="project-location">📍 Kanshio & Wadata, Benue State</p>
+      </div>
+      <div class="project-right">
+        <div class="context-cols">
+          <div class="context-col">
+            <span class="context-col-label">Role</span>
+            <span class="context-col-value">Sensitisation Facilitator</span>
+          </div>
+          <div class="context-col">
+            <span class="context-col-label">Period</span>
+            <span class="context-col-value">2026</span>
+          </div>
+          <div class="context-col">
+            <span class="context-col-label">Reach</span>
+            <span class="context-col-value">4 schools across 2 communities</span>
+          </div>
+        </div>
+
+        <p>Menstrual health remains a deeply stigmatised topic in many Nigerian communities — with girls missing school, facing shame, and lacking access to accurate health information. This outreach programme took the conversation directly into primary and secondary schools in two communities in Benue State.</p>
+
+        <p>As a facilitator, I created a safe, educational space for students, teachers, and community members to engage honestly with menstrual health — breaking silence, reducing stigma, and equipping girls with knowledge and confidence.</p>
+
+        <div class="what-i-did">
+          <span class="subsection-title">What I Did</span>
+          <ul class="did-list">
+            <li>Delivered MHM sensitisation sessions at LGEA Primary School, Kanshio</li>
+            <li>Facilitated outreach at UBE Kanshio and NKST Primary School, Wadata</li>
+            <li>Conducted awareness sessions at UBE Wadata</li>
+            <li>Led interactive learning sessions with pupils, students, and teachers</li>
+            <li>Addressed stigma, hygiene practices, and basic menstrual health facts</li>
+            <li>Created space for questions, discussion, and peer-to-peer learning</li>
+          </ul>
+        </div>
+
+        <div class="results-row">
+          <div class="result-chip"><span class="chip-number">4</span> Schools Reached</div>
+          <div class="result-chip"><span class="chip-number">2</span> Communities</div>
+          <div class="result-chip"><span class="chip-number">✓</span> Stigma Reduction Focus</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 5: Youth Mentorship -->
+    <div class="project-block">
+      <div class="project-left">
+        <div class="project-number">05</div>
+        <span class="project-icon">🌱</span>
+        <span class="project-org">Independent Initiative</span>
+        <h2 class="project-title">Youth Career Guidance & Mentorship</h2>
+        <p class="project-location">📍 Benue State, Nigeria</p>
+      </div>
+      <div class="project-right">
+        <div class="context-cols">
+          <div class="context-col">
+            <span class="context-col-label">Role</span>
+            <span class="context-col-value">Mentor & Career Guidance Counsellor</span>
+          </div>
+          <div class="context-col">
+            <span class="context-col-label">Period</span>
+            <span class="context-col-value">Ongoing</span>
+          </div>
+          <div class="context-col">
+            <span class="context-col-label">Focus</span>
+            <span class="context-col-value">Career clarity for secondary school leavers</span>
+          </div>
+        </div>
+
+        <p>Alongside my structured programmes, I have personally mentored over 50 young people — secondary school leavers who were uncertain about their next step, unsure of their strengths, or simply needed someone to talk to who could offer honest, informed guidance.</p>
+
+        <p>This work is less visible than large-scale training but arguably more personal. Sitting with a young person and helping them see possibility where they saw confusion — that is the work I care about most.</p>
+
+        <div class="what-i-did">
+          <span class="subsection-title">What I Did</span>
+          <ul class="did-list">
+            <li>Conducted one-on-one career assessment and guidance sessions</li>
+            <li>Helped young people identify strengths, interests, and suitable educational paths</li>
+            <li>Supported post-WAEC decision-making: university, vocational, or entrepreneurship</li>
+            <li>Provided ongoing accountability check-ins and goal-setting support</li>
+            <li>Facilitated group mentorship sessions in schools and community settings</li>
+          </ul>
+        </div>
+
+        <div class="results-row">
+          <div class="result-chip"><span class="chip-number">50+</span> Young People Mentored</div>
+          <div class="result-chip"><span class="chip-number">✓</span> Ongoing</div>
+          <div class="result-chip"><span class="chip-number">✓</span> Career Guidance Focus</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- COMING SOON -->
+  <section class="coming-soon">
+    <div class="coming-soon-inner">
+      <span class="section-label" style="color:var(--gold);">On the Horizon</span>
+      <h2 class="coming-title">What's Next</h2>
+      <div class="coming-grid">
+        <div class="coming-card">
+          <span class="coming-tag">In View</span>
+          <div class="coming-card-title">International Development Scholarship</div>
+          <p class="coming-card-desc">Pursuing fully-funded postgraduate scholarship opportunities in international development, education policy, and youth empowerment.</p>
+        </div>
+        <div class="coming-card">
+          <span class="coming-tag">Building</span>
+          <div class="coming-card-title">Youth Leadership Initiative</div>
+          <p class="coming-card-desc">A structured mentorship and leadership programme for Nigerian secondary school students — combining counselling, skills training, and community service.</p>
+        </div>
+        <div class="coming-card">
+          <span class="coming-tag">Exploring</span>
+          <div class="coming-card-title">NGO / INGO Collaboration</div>
+          <p class="coming-card-desc">Open to partnerships with development organisations working in education, financial inclusion, digital literacy, or youth empowerment across Africa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2 class="cta-title">Want to Collaborate on Something Meaningful?</h2>
+    <p>Whether you're running a programme, leading an organisation, or looking for a committed facilitator — let's talk about how we can work together.</p>
+    <div class="cta-buttons">
+      <a href="/connect.html" class="btn-white">Start a Conversation</a>
+      <a href="/services.html" class="btn-ghost">View My Services</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Ability Christopher &nbsp;·&nbsp; Educator | Counsellor | Public Speaker &nbsp;·&nbsp; <a href="mailto:abilityc86@gmail.com">abilityc86@gmail.com</a></p>
+  </footer>
+
 </body>
 </html>
