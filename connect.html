@@ -1,140 +1,798 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect with Ability Christopher</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f0f2f5;
-            color: #1e2a3e;
-            line-height: 1.6;
-            padding: 20px;
-        }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        .nav {
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #cbd5e1;
-        }
-        .nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #0a3b5c;
-            font-weight: bold;
-        }
-        .nav a:hover {
-            text-decoration: underline;
-        }
-        h1 {
-            font-size: 2rem;
-            color: #0a3b5c;
-            margin-bottom: 10px;
-        }
-        .social-links {
-            margin: 30px 0;
-        }
-        .social-item {
-            background: #f8fafc;
-            padding: 15px 20px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .social-icon {
-            font-size: 1.8rem;
-            margin-right: 15px;
-            min-width: 50px;
-        }
-        .social-item a {
-            color: #0a3b5c;
-            text-decoration: none;
-            word-break: break-all;
-        }
-        .social-item a:hover {
-            text-decoration: underline;
-        }
-        .email {
-            background: #e9f0f5;
-        }
-        footer {
-            text-align: center;
-            margin-top: 45px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 0.9rem;
-            color: #5c6f87;
-        }
-        @media (max-width: 600px) {
-            .container { padding: 20px; }
-            .social-item { flex-direction: column; align-items: flex-start; }
-            .social-icon { margin-bottom: 8px; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Connect with Ability Christopher — for speaking requests, counselling enquiries, collaborations, mentorship, or just to say hello." />
+  <title>Connect | Ability Christopher</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink: #0f0f0f;
+      --paper: #f7f4ef;
+      --gold: #b8922a;
+      --gold-light: #d4aa4a;
+      --warm-mid: #e8e2d9;
+      --muted: #7a7065;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 5%;
+      background: rgba(247, 244, 239, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--warm-mid);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--gold); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: var(--ink);
+      padding: 9rem 5% 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: 'CONNECT';
+      position: absolute;
+      right: 1%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(4rem, 11vw, 10rem);
+      font-weight: 700;
+      color: rgba(255,255,255,0.03);
+      letter-spacing: 0.05em;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .page-header-inner { max-width: 1200px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+
+    .page-subtitle {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      max-width: 520px;
+      line-height: 1.8;
+    }
+
+    /* ── REASONS TO CONNECT ── */
+    .reasons {
+      background: var(--gold);
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .reason-item {
+      flex: 1;
+      min-width: 180px;
+      padding: 1.8rem 2rem;
+      border-right: 1px solid rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .reason-item:last-child { border-right: none; }
+
+    .reason-icon { font-size: 1.3rem; flex-shrink: 0; }
+
+    .reason-text {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--white);
+      letter-spacing: 0.02em;
+      line-height: 1.4;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 6rem 5%;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    /* ── LEFT COLUMN ── */
+    .connect-left { position: sticky; top: 7rem; }
+
+    .connect-intro-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+    }
+
+    .connect-intro-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .connect-intro-body {
+      font-size: 1rem;
+      color: #3a3530;
+      font-weight: 300;
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Direct contact links */
+    .direct-links { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }
+
+    .direct-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.2rem;
+      background: var(--white);
+      border: 1px solid var(--warm-mid);
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .direct-link:hover {
+      border-color: var(--gold);
+      transform: translateX(4px);
+    }
+
+    .direct-link-icon {
+      font-size: 1.3rem;
+      width: 2.2rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .direct-link-info { flex: 1; }
+
+    .direct-link-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .direct-link-value {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .direct-link-arrow {
+      font-size: 0.85rem;
+      color: var(--gold);
+    }
+
+    /* Social links */
+    .socials-title {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .socials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.7rem 0.9rem;
+      background: var(--ink);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .social-link:hover { background: var(--gold); }
+
+    .social-link-icon { font-size: 1rem; }
+
+    /* ── RIGHT COLUMN — FORM ── */
+    .connect-right {}
+
+    .form-header {
+      margin-bottom: 2rem;
+    }
+
+    .form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    /* Reason selector */
+    .reason-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .reason-btn {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 0.45rem 1rem;
+      border: 1px solid var(--warm-mid);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      border-radius: 2px;
+    }
+
+    .reason-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .reason-btn.selected { background: var(--ink); border-color: var(--ink); color: var(--white); }
+
+    /* Form fields */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+
+    .form-field label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--ink);
+      background: var(--white);
+      border: 1px solid var(--warm-mid);
+      padding: 0.85rem 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+      border-radius: 0;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-field textarea {
+      min-height: 140px;
+      resize: vertical;
+      line-height: 1.65;
+    }
+
+    .form-field select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a7065' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+      cursor: pointer;
+    }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--ink);
+      color: var(--white);
+      padding: 1rem 2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 2px solid var(--ink);
+      cursor: pointer;
+      transition: background 0.25s, border-color 0.25s;
+    }
+
+    .submit-btn:hover { background: var(--gold); border-color: var(--gold); }
+
+    /* Success message */
+    .success-msg {
+      display: none;
+      background: #f0faf4;
+      border: 1px solid #a3d9b5;
+      padding: 1.2rem 1.5rem;
+      font-size: 0.92rem;
+      color: #1a5c35;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ── AVAILABILITY STRIP ── */
+    .availability {
+      background: var(--ink);
+      padding: 4rem 5%;
+    }
+
+    .availability-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .avail-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .avail-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .avail-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.3rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .avail-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .avail-dot.open { background: #4caf7d; }
+    .avail-dot.limited { background: var(--gold-light); }
+    .avail-dot.closed { background: #888; }
+
+    .avail-item-text { flex: 1; }
+
+    .avail-item-label {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--white);
+    }
+
+    .avail-item-detail {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.1rem;
+    }
+
+    .avail-status {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border-radius: 2px;
+    }
+
+    .avail-status.open { background: rgba(76,175,125,0.15); color: #4caf7d; }
+    .avail-status.limited { background: rgba(212,170,74,0.15); color: var(--gold-light); }
+    .avail-status.closed { background: rgba(136,136,136,0.1); color: #888; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0a0a0a;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 2.5rem 5%;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+    }
+
+    footer a { color: var(--gold-light); text-decoration: none; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      nav .nav-links { display: none; }
+
+      .main-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 4rem 5%;
+      }
+
+      .connect-left { position: static; }
+
+      .form-row { grid-template-columns: 1fr; }
+
+      .availability-inner { grid-template-columns: 1fr; gap: 2rem; }
+
+      .reason-item { min-width: 140px; }
+
+      .socials-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="nav">
-        <a href="https://abilitychristopher.github.io/">Home</a>
-<a href="services.html">Services</a>
-<a href="connect.html">Connect</a>
-<a href="gallery.html">Gallery</a>
-<a href="projects.html">Projects</a>
-<a href="blog.html">Blog</a>
+  <!-- NAV -->
+  <nav>
+    <a href="/index.html" class="nav-logo">Ability Christopher</a>
+    <ul class="nav-links">
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/index.html#speaking">Speaking</a></li>
+      <li><a href="/projects.html">Impact</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/connect.html" class="active">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <span class="section-label">Get in Touch</span>
+      <h1 class="page-title">Let's Connect</h1>
+      <p class="page-subtitle">Whether you want to collaborate, invite me to speak, explore counselling, or simply have a conversation — the door is open.</p>
+    </div>
+  </header>
+
+  <!-- REASONS STRIP -->
+  <div class="reasons">
+    <div class="reason-item">
+      <span class="reason-icon">🎤</span>
+      <span class="reason-text">Book a Speaking Engagement</span>
+    </div>
+    <div class="reason-item">
+      <span class="reason-icon">🧭</span>
+      <span class="reason-text">Request Counselling or Mentorship</span>
+    </div>
+    <div class="reason-item">
+      <span class="reason-icon">🤝</span>
+      <span class="reason-text">Propose a Collaboration</span>
+    </div>
+    <div class="reason-item">
+      <span class="reason-icon">🎓</span>
+      <span class="reason-text">Scholarship or Reference Enquiry</span>
+    </div>
+    <div class="reason-item">
+      <span class="reason-icon">💬</span>
+      <span class="reason-text">Just Say Hello</span>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <!-- LEFT: Info -->
+    <div class="connect-left">
+      <h2 class="connect-intro-title">Every great thing starts with a <em>conversation.</em></h2>
+      <p class="connect-intro-body">I read every message I receive. Whether you are a school administrator looking for a speaker, a young person seeking guidance, an NGO exploring partnership, or someone who simply resonated with something I wrote — I would love to hear from you.<br><br>I typically respond within 48 hours.</p>
+
+      <div class="direct-links">
+        <a href="mailto:abilityc86@gmail.com" class="direct-link">
+          <span class="direct-link-icon">✉️</span>
+          <span class="direct-link-info">
+            <span class="direct-link-label">Email</span>
+            <span class="direct-link-value">abilityc86@gmail.com</span>
+          </span>
+          <span class="direct-link-arrow">→</span>
+        </a>
+        <a href="https://www.linkedin.com/in/ability-christopher" target="_blank" rel="noopener" class="direct-link">
+          <span class="direct-link-icon">💼</span>
+          <span class="direct-link-info">
+            <span class="direct-link-label">LinkedIn</span>
+            <span class="direct-link-value">ability-christopher</span>
+          </span>
+          <span class="direct-link-arrow">→</span>
+        </a>
+        <a href="https://www.instagram.com/christopher_ability" target="_blank" rel="noopener" class="direct-link">
+          <span class="direct-link-icon">📸</span>
+          <span class="direct-link-info">
+            <span class="direct-link-label">Instagram</span>
+            <span class="direct-link-value">@christopher_ability</span>
+          </span>
+          <span class="direct-link-arrow">→</span>
+        </a>
+        <a href="https://youtube.com/@abilitychristopher-fr4vk" target="_blank" rel="noopener" class="direct-link">
+          <span class="direct-link-icon">▶️</span>
+          <span class="direct-link-info">
+            <span class="direct-link-label">YouTube</span>
+            <span class="direct-link-value">Ability Christopher</span>
+          </span>
+          <span class="direct-link-arrow">→</span>
+        </a>
+      </div>
+
+      <span class="socials-title">Also find me on</span>
+      <div class="socials-grid">
+        <a href="https://www.facebook.com/ability.christopher.5" target="_blank" rel="noopener" class="social-link">
+          <span class="social-link-icon">📘</span> Facebook
+        </a>
+        <a href="https://www.linkedin.com/in/ability-christopher" target="_blank" rel="noopener" class="social-link">
+          <span class="social-link-icon">💼</span> LinkedIn
+        </a>
+        <a href="https://www.instagram.com/christopher_ability" target="_blank" rel="noopener" class="social-link">
+          <span class="social-link-icon">📸</span> Instagram
+        </a>
+        <a href="https://youtube.com/@abilitychristopher-fr4vk" target="_blank" rel="noopener" class="social-link">
+          <span class="social-link-icon">▶️</span> YouTube
+        </a>
+      </div>
     </div>
 
-    <h1>📫 Connect With Me</h1>
-    <p>Follow, message, or collaborate – I’d love to hear from you.</p>
+    <!-- RIGHT: Form -->
+    <div class="connect-right">
+      <div class="form-header">
+        <h2 class="form-title">Send a Message</h2>
+        <p class="form-subtitle">Fill in the form below and I'll get back to you as soon as possible.</p>
+      </div>
 
-    <div class="social-links">
-        <div class="social-item">
-            <div class="social-icon">📘</div>
-            <div><strong>Facebook:</strong><br>
-            <a href="https://www.facebook.com/ability.christopher.5" target="_blank">https://www.facebook.com/ability.christopher.5</a></div>
+      <!-- Quick reason selector -->
+      <div class="reason-selector" id="reason-selector">
+        <button class="reason-btn" onclick="selectReason(this, 'Speaking Request')">🎤 Speaking</button>
+        <button class="reason-btn" onclick="selectReason(this, 'Counselling / Mentorship')">🧭 Counselling</button>
+        <button class="reason-btn" onclick="selectReason(this, 'Collaboration / Partnership')">🤝 Collaboration</button>
+        <button class="reason-btn" onclick="selectReason(this, 'Scholarship / Reference')">🎓 Scholarship</button>
+        <button class="reason-btn" onclick="selectReason(this, 'General Enquiry')">💬 General</button>
+      </div>
+
+      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleSubmit(event)">
+
+        <input type="hidden" name="subject" id="form-subject" value="New message from abilitychristopher.github.io" />
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first_name" placeholder="e.g. Chukwuemeka" required />
+          </div>
+          <div class="form-field">
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last_name" placeholder="e.g. Obi" required />
+          </div>
         </div>
 
-        <div class="social-item">
-            <div class="social-icon">🔗</div>
-            <div><strong>LinkedIn:</strong><br>
-            <a href="https://www.linkedin.com/in/ability-christopher" target="_blank">https://www.linkedin.com/in/ability-christopher</a></div>
+        <div class="form-field">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
         </div>
 
-        <div class="social-item">
-            <div class="social-icon">📷</div>
-            <div><strong>Instagram:</strong><br>
-            <a href="https://www.instagram.com/christopher_ability?igsh=MW9hZzBoa3E1cWdqdQ==" target="_blank">https://www.instagram.com/christopher_ability</a></div>
+        <div class="form-field">
+          <label for="organisation">Organisation / School / Affiliation</label>
+          <input type="text" id="organisation" name="organisation" placeholder="Optional — helps me respond more effectively" />
         </div>
 
-        <div class="social-item email">
-            <div class="social-icon">✉️</div>
-            <div><strong>Email:</strong><br>
-            <a href="mailto:abilityc86@gmail.com">abilityc86@gmail.com</a></div>
+        <div class="form-field">
+          <label for="reason">Reason for Contact *</label>
+          <select id="reason" name="reason" required>
+            <option value="" disabled selected>Select a reason…</option>
+            <option value="Speaking Request">Speaking Request</option>
+            <option value="Counselling / Mentorship">Counselling / Mentorship</option>
+            <option value="Collaboration / Partnership">Collaboration / Partnership</option>
+            <option value="Digital Literacy Training">Digital Literacy Training</option>
+            <option value="Financial Literacy Session">Financial Literacy Session</option>
+            <option value="HRM Training">HRM Training</option>
+            <option value="Scholarship / Reference">Scholarship / Reference</option>
+            <option value="Media / Interview">Media / Interview</option>
+            <option value="General Enquiry">General Enquiry</option>
+          </select>
         </div>
+
+        <div class="form-field">
+          <label for="message">Your Message *</label>
+          <textarea id="message" name="message" placeholder="Tell me a bit about what you have in mind — the more detail, the better I can help." required></textarea>
+        </div>
+
+        <p class="form-note">
+          Your information is used only to respond to your message. I do not share or sell contact details.
+          For speaking and training requests, please include the event date, location, and expected audience size where possible.
+        </p>
+
+        <button type="submit" class="submit-btn">Send Message →</button>
+
+        <div class="success-msg" id="success-msg">
+          ✅ Thank you! Your message has been received. I'll be in touch within 48 hours. Please check your inbox (and spam folder, just in case).
+        </div>
+
+      </form>
     </div>
+  </div>
 
-    <p style="margin-top: 30px;">👉 Prefer a direct conversation? Send me an email or message me on any platform. I typically respond within 24 hours.</p>
+  <!-- AVAILABILITY STRIP -->
+  <section class="availability">
+    <div class="availability-inner">
+      <div>
+        <span class="section-label" style="color:var(--gold-light);">Current Availability</span>
+        <h2 class="avail-title">What I'm open to right now</h2>
+      </div>
+      <div class="avail-items">
+        <div class="avail-item">
+          <div class="avail-dot open"></div>
+          <div class="avail-item-text">
+            <div class="avail-item-label">Speaking Engagements</div>
+            <div class="avail-item-detail">Schools, NGOs, conferences, NYSC camps, community events</div>
+          </div>
+          <span class="avail-status open">Open</span>
+        </div>
+        <div class="avail-item">
+          <div class="avail-dot open"></div>
+          <div class="avail-item-text">
+            <div class="avail-item-label">Youth Counselling & Mentorship</div>
+            <div class="avail-item-detail">Individual sessions and group mentorship programmes</div>
+          </div>
+          <span class="avail-status open">Open</span>
+        </div>
+        <div class="avail-item">
+          <div class="avail-dot open"></div>
+          <div class="avail-item-text">
+            <div class="avail-item-label">NGO / Development Sector Collaborations</div>
+            <div class="avail-item-detail">Training facilitation, programme delivery, partnerships</div>
+          </div>
+          <span class="avail-status open">Open</span>
+        </div>
+        <div class="avail-item">
+          <div class="avail-dot limited"></div>
+          <div class="avail-item-text">
+            <div class="avail-item-label">Scholarship & Fellowship Applications</div>
+            <div class="avail-item-detail">Actively pursuing fully-funded international opportunities</div>
+          </div>
+          <span class="avail-status limited">In Progress</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        © 2026 Ability Christopher — Let’s stay connected
-    </footer>
-</div>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Ability Christopher &nbsp;·&nbsp; Educator | Counsellor | Public Speaker &nbsp;·&nbsp; <a href="mailto:abilityc86@gmail.com">abilityc86@gmail.com</a></p>
+  </footer>
+
+  <script>
+    // Quick reason selector syncs with dropdown
+    function selectReason(btn, value) {
+      document.querySelectorAll('.reason-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      const dropdown = document.getElementById('reason');
+      dropdown.value = value;
+      document.getElementById('form-subject').value = 'New message: ' + value + ' — abilitychristopher.github.io';
+    }
+
+    // Form submission handler
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('contact-form');
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          document.querySelectorAll('.reason-btn').forEach(b => b.classList.remove('selected'));
+          document.getElementById('success-msg').style.display = 'block';
+          document.getElementById('success-msg').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          alert('Something went wrong. Please email me directly at abilityc86@gmail.com');
+        }
+      })
+      .catch(() => {
+        alert('Could not send message. Please email me directly at abilityc86@gmail.com');
+      });
+    }
+  </script>
 
 </body>
 </html>
