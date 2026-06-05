@@ -1,136 +1,673 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Ability Christopher – Guidance, Digital Literacy, Mentorship</title>
-    <meta name="description" content="Professional services by Ability Christopher: Guidance & Counselling, Digital Literacy Training, Youth Empowerment Talks, and Community Advocacy.">
-    <meta property="og:title" content="Services | Ability Christopher">
-    <meta property="og:description" content="Empowering individuals through counselling, digital training, and leadership talks.">
-    <meta property="og:url" content="https://abilitychristopher.github.io/services.html">
-    <meta property="og:type" content="website">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fc 0%, #e9eef5 100%);
-            color: #1e2a3e;
-            line-height: 1.6;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            background: white;
-            border-radius: 32px;
-            padding: 50px 40px;
-            box-shadow: 0 30px 50px rgba(0,0,0,0.08);
-        }
-        .nav {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #e2e8f0;
-        }
-        .nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #1e4a6b;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-        .nav a:hover {
-            color: #f59e0b;
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: #0a3b5c;
-            margin-bottom: 10px;
-        }
-        .sub {
-            color: #4b5563;
-            margin-bottom: 40px;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
-        }
-        .service-card {
-            background: #f9f9ff;
-            border-radius: 24px;
-            padding: 28px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            transition: all 0.2s ease;
-            border: 1px solid #eef2f9;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
-        }
-        .service-card h2 {
-            font-size: 1.6rem;
-            color: #0a3b5c;
-            margin-bottom: 15px;
-            border-left: 4px solid #f59e0b;
-            padding-left: 15px;
-        }
-        .service-card p {
-            color: #2d3e50;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 24px;
-            border-top: 1px solid #e2e8f0;
-            font-size: 0.9rem;
-        }
-        @media (max-width: 700px) {
-            .container { padding: 30px 20px; }
-            h1 { font-size: 1.8rem; }
-            .nav a { margin: 0 12px; font-size: 0.9rem; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Services offered by Ability Christopher — Counselling, Public Speaking, Digital Literacy, Financial Literacy, HRM Training, and Youth Mentorship." />
+  <title>Services | Ability Christopher</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink: #0f0f0f;
+      --paper: #f7f4ef;
+      --gold: #b8922a;
+      --gold-light: #d4aa4a;
+      --warm-mid: #e8e2d9;
+      --muted: #7a7065;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 5%;
+      background: rgba(247, 244, 239, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--warm-mid);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--gold); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: var(--ink);
+      padding: 9rem 5% 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: 'SERVICES';
+      position: absolute;
+      right: 3%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(5rem, 12vw, 11rem);
+      font-weight: 700;
+      color: rgba(255,255,255,0.03);
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .page-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+
+    .page-subtitle {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      max-width: 520px;
+      line-height: 1.8;
+    }
+
+    /* ── INTRO ── */
+    .intro {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 5% 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .intro-left {
+      position: sticky;
+      top: 7rem;
+    }
+
+    .intro-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+
+    .intro-right p {
+      font-size: 1.05rem;
+      color: #3a3530;
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ── SERVICES LIST ── */
+    .services-list {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 5% 6rem;
+    }
+
+    .service-block {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: start;
+      padding: 4rem 0;
+      border-top: 1px solid var(--warm-mid);
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .service-block:last-child { border-bottom: 1px solid var(--warm-mid); }
+
+    .service-left {
+      position: sticky;
+      top: 7rem;
+    }
+
+    .service-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--warm-mid);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-icon-large {
+      font-size: 2.2rem;
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+
+    .service-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .service-tag {
+      display: inline-block;
+      margin-top: 0.8rem;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 0.25rem 0.7rem;
+      border-radius: 2px;
+    }
+
+    .service-right p {
+      font-size: 1rem;
+      color: #3a3530;
+      font-weight: 300;
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-deliverables {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .service-deliverables li {
+      font-size: 0.92rem;
+      color: var(--muted);
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--warm-mid);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+
+    .service-deliverables li::before {
+      content: '→';
+      color: var(--gold);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    .service-deliverables li:last-child { border-bottom: none; }
+
+    .service-audience {
+      background: var(--warm-mid);
+      padding: 1rem 1.3rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .service-audience strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    /* ── ENGAGEMENT MODEL ── */
+    .engagement {
+      background: var(--ink);
+      padding: 6rem 5%;
+    }
+
+    .engagement-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .engagement-header {
+      margin-bottom: 3rem;
+    }
+
+    .engagement-header .section-label { color: var(--gold-light); }
+
+    .engagement-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .engagement-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .engagement-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 2rem;
+      transition: border-color 0.3s;
+    }
+
+    .engagement-card:hover { border-color: var(--gold); }
+
+    .engagement-mode {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 0.7rem;
+      display: block;
+    }
+
+    .engagement-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+
+    .engagement-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+    }
+
+    /* ── CTA ── */
+    .cta {
+      background: var(--gold);
+      padding: 6rem 5%;
+      text-align: center;
+    }
+
+    .cta-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--gold);
+      padding: 0.9rem 2.2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      display: inline-block;
+    }
+
+    .btn-white:hover { opacity: 0.88; }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      padding: 0.9rem 2.2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.5);
+      transition: background 0.2s;
+      display: inline-block;
+    }
+
+    .btn-ghost:hover { background: rgba(255,255,255,0.15); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0a0a0a;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 2.5rem 5%;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+    }
+
+    footer a {
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      nav .nav-links { display: none; }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-top: 3rem;
+      }
+
+      .intro-left { position: static; }
+
+      .service-block {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2.5rem 0;
+      }
+
+      .service-left { position: static; }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-    <div class="nav">
-        <a href="https://abilitychristopher.github.io/">Home</a>
-        <a href="services.html">Services</a>
-        <a href="connect.html">Connect</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="projects.html">Projects</a>
-        <a href="blog.html">Blog</a>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/index.html" class="nav-logo">Ability Christopher</a>
+    <ul class="nav-links">
+      <li><a href="/services.html" class="active">Services</a></li>
+      <li><a href="/index.html#speaking">Speaking</a></li>
+      <li><a href="/projects.html">Impact</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/connect.html">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <span class="section-label">What I Offer</span>
+      <h1 class="page-title">Services</h1>
+      <p class="page-subtitle">From one-on-one counselling to large-scale community training — here is how I show up for the people I serve.</p>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <div class="intro">
+    <div class="intro-left">
+      <h2 class="intro-title">Education with a purpose. Impact you can feel.</h2>
+    </div>
+    <div class="intro-right">
+      <p>Everything I do flows from one conviction: <strong>every person carries untapped potential</strong> — and the right guidance, at the right time, unlocks it.</p>
+      <p>My services are built around the three roles that define me — Educator, Counsellor, and Public Speaker — and are available to individuals, schools, NGOs, community organisations, and corporate groups.</p>
+      <p>I bring field experience, professional training, and a genuine passion for human development to every engagement — whether it's a quiet one-on-one session or a stage full of hundreds.</p>
+    </div>
+  </div>
+
+  <!-- SERVICES LIST -->
+  <div class="services-list">
+
+    <!-- 1. Guidance & Counselling -->
+    <div class="service-block">
+      <div class="service-left">
+        <div class="service-number">01</div>
+        <span class="service-icon-large">🧭</span>
+        <h2 class="service-title">Guidance & Counselling</h2>
+        <span class="service-tag">Core Service</span>
+      </div>
+      <div class="service-right">
+        <p>Rooted in my B.Ed in Guidance and Counselling, this service provides structured, confidential, and empathetic support for individuals navigating life decisions, career crossroads, and personal development challenges.</p>
+        <p>Whether you are a student figuring out your next step, a young adult feeling stuck, or an organisation looking to support its people — I offer a safe space to think, process, and move forward with clarity.</p>
+        <ul class="service-deliverables">
+          <li>One-on-one personal and career counselling sessions</li>
+          <li>Career assessment and educational path guidance</li>
+          <li>Goal-setting and accountability mentoring</li>
+          <li>Group counselling workshops for schools and organisations</li>
+          <li>NYSC and post-graduation transition support</li>
+        </ul>
+        <div class="service-audience">
+          <strong>Best for:</strong> Secondary school students, university graduates, NYSC corps members, young professionals, and organisations seeking employee wellbeing support.
+        </div>
+      </div>
     </div>
 
-    <h1>📌 Services I Offer</h1>
-    <div class="sub">Practical, purpose-driven support for individuals and communities</div>
-
-    <div class="services-grid">
-        <div class="service-card">
-            <h2>Guidance & Counselling</h2>
-            <p>One-on-one mentoring and career guidance for youth, helping them discover purpose and make informed life decisions.</p>
+    <!-- 2. Public Speaking -->
+    <div class="service-block">
+      <div class="service-left">
+        <div class="service-number">02</div>
+        <span class="service-icon-large">🎤</span>
+        <h2 class="service-title">Public Speaking & Talks</h2>
+        <span class="service-tag">Available to Book</span>
+      </div>
+      <div class="service-right">
+        <p>I speak on purpose, leadership, and human potential — with the energy of someone who has lived the message, not just studied it. My talks are designed to move people: from passive listening to active decision-making.</p>
+        <p>I am available for school assemblies, youth conferences, NGO programmes, NYSC camp sessions, church events, and corporate leadership forums.</p>
+        <ul class="service-deliverables">
+          <li>Discovering Purpose in a Distracted World</li>
+          <li>Leadership & Influence for Young Africans</li>
+          <li>Career Clarity: Finding Your Path After School</li>
+          <li>Digital Literacy as a Life Skill in the 21st Century</li>
+          <li>Financial Intelligence for Students & Young Professionals</li>
+          <li>Building Confidence and Communication Skills</li>
+        </ul>
+        <div class="service-audience">
+          <strong>Best for:</strong> Schools, NGOs, youth conferences, NYSC camps, churches, corporate teams, and community organisations seeking a speaker who connects and inspires.
         </div>
-        <div class="service-card">
-            <h2>Digital Literacy Training</h2>
-            <p>Workshops for individuals and community groups on basic computer skills, internet safety, and online tools.</p>
-        </div>
-        <div class="service-card">
-            <h2>Youth Empowerment Talks</h2>
-            <p>Motivational speaking and leadership development sessions for schools, NYSC camps, and community events.</p>
-        </div>
-        <div class="service-card">
-            <h2>Advocacy & Community Engagement</h2>
-            <p>Partnering with organizations to design and deliver programs that uplift women, youth, and underserved groups.</p>
-        </div>
+      </div>
     </div>
 
-    <footer>© 2026 Ability Christopher — Let’s work together</footer>
-</div>
+    <!-- 3. Digital Literacy Training -->
+    <div class="service-block">
+      <div class="service-left">
+        <div class="service-number">03</div>
+        <span class="service-icon-large">💻</span>
+        <h2 class="service-title">Digital Literacy Training</h2>
+        <span class="service-tag">Community & Institutional</span>
+      </div>
+      <div class="service-right">
+        <p>As a certified facilitator under the NITDA DL4ALL (Digital Literacy For All) initiative, I deliver practical digital skills training to individuals and community groups — with a focus on those in the informal sector who have had little or no digital exposure.</p>
+        <p>My approach is hands-on, jargon-free, and context-sensitive — making digital tools accessible and relevant to everyday life in Nigeria.</p>
+        <ul class="service-deliverables">
+          <li>Basic ICT skills: smartphone use, email, internet navigation</li>
+          <li>Mobile banking and digital financial tools</li>
+          <li>Online safety, data privacy, and scam awareness</li>
+          <li>Social media for personal branding and small business</li>
+          <li>Digital tools for NGOs, community groups, and educators</li>
+        </ul>
+        <div class="service-audience">
+          <strong>Best for:</strong> Market traders, community groups, informal sector workers, rural women's organisations, and institutions running digital inclusion programmes.
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Financial Literacy Education -->
+    <div class="service-block">
+      <div class="service-left">
+        <div class="service-number">04</div>
+        <span class="service-icon-large">💰</span>
+        <h2 class="service-title">Financial Literacy Education</h2>
+        <span class="service-tag">Schools & Youth Orgs</span>
+      </div>
+      <div class="service-right">
+        <p>As a graduate of the Financial Literacy Leadership Fellowship (KAFI), I equip students and young adults with practical money skills — the kind schools rarely teach but life demands immediately.</p>
+        <p>My financial literacy sessions are interactive, relatable, and rooted in the Nigerian economic reality — covering everything from basic budgeting to understanding financial systems.</p>
+        <ul class="service-deliverables">
+          <li>Budgeting and saving habits for students and young adults</li>
+          <li>Understanding income, expenses, and financial planning</li>
+          <li>Introduction to entrepreneurship and income generation</li>
+          <li>Avoiding debt traps and financial scams</li>
+          <li>Long-term thinking: goals, investment basics, and wealth mindset</li>
+        </ul>
+        <div class="service-audience">
+          <strong>Best for:</strong> Secondary and tertiary schools, NYSC programmes, youth empowerment NGOs, and community financial literacy drives.
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. HRM Training & Workforce Development -->
+    <div class="service-block">
+      <div class="service-left">
+        <div class="service-number">05</div>
+        <span class="service-icon-large">🏢</span>
+        <h2 class="service-title">HRM Training & Workforce Development</h2>
+        <span class="service-tag">Organisational</span>
+      </div>
+      <div class="service-right">
+        <p>With multiple certifications in Human Resource Management, I support organisations and teams in building healthier, more productive work cultures — with a focus on people, not just processes.</p>
+        <p>This service is particularly relevant for NGOs, community organisations, and small businesses in Nigeria looking to formalise and strengthen how they manage their people.</p>
+        <ul class="service-deliverables">
+          <li>Workforce onboarding and orientation frameworks</li>
+          <li>Team communication and conflict resolution workshops</li>
+          <li>Staff motivation and performance mindset sessions</li>
+          <li>Volunteer and community worker management</li>
+          <li>HR fundamentals training for team leads and supervisors</li>
+        </ul>
+        <div class="service-audience">
+          <strong>Best for:</strong> NGOs, community organisations, small businesses, and team leads looking to improve people management and workplace culture.
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Youth Mentorship -->
+    <div class="service-block">
+      <div class="service-left">
+        <div class="service-number">06</div>
+        <span class="service-icon-large">🌱</span>
+        <h2 class="service-title">Youth Mentorship</h2>
+        <span class="service-tag">Individual & Group</span>
+      </div>
+      <div class="service-right">
+        <p>Beyond formal counselling, I offer ongoing mentorship to young people who need a consistent, trusted voice in their corner — someone who will challenge them, cheer them on, and help them stay on course.</p>
+        <p>This is less structured than counselling and more relationship-based — built around the young person's unique journey, goals, and challenges.</p>
+        <ul class="service-deliverables">
+          <li>Regular one-on-one check-ins and accountability sessions</li>
+          <li>Scholarship and application guidance</li>
+          <li>Leadership and character development conversations</li>
+          <li>Group mentorship circles for youth organisations</li>
+          <li>Life skills: discipline, focus, communication, resilience</li>
+        </ul>
+        <div class="service-audience">
+          <strong>Best for:</strong> Secondary school leavers, university students, young professionals (18–30), and youth-focused organisations seeking mentorship programming.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ENGAGEMENT MODEL -->
+  <section class="engagement">
+    <div class="engagement-inner">
+      <div class="engagement-header">
+        <span class="section-label">How We Can Work Together</span>
+        <h2 class="engagement-title">Flexible Engagement Models</h2>
+      </div>
+      <div class="engagement-grid">
+        <div class="engagement-card">
+          <span class="engagement-mode">Format</span>
+          <div class="engagement-name">One-off Sessions</div>
+          <p class="engagement-desc">A single talk, training, or counselling session. Great for events, conferences, school visits, and community programmes.</p>
+        </div>
+        <div class="engagement-card">
+          <span class="engagement-mode">Format</span>
+          <div class="engagement-name">Short Programmes</div>
+          <p class="engagement-desc">2–4 week structured engagements for schools, NGOs, or organisations wanting focused impact on a specific area.</p>
+        </div>
+        <div class="engagement-card">
+          <span class="engagement-mode">Format</span>
+          <div class="engagement-name">Ongoing Mentorship</div>
+          <p class="engagement-desc">Monthly or bi-weekly sessions for individuals or small groups seeking sustained growth and accountability over time.</p>
+        </div>
+        <div class="engagement-card">
+          <span class="engagement-mode">Format</span>
+          <div class="engagement-name">Partnerships & Collaborations</div>
+          <p class="engagement-desc">For NGOs, schools, and development organisations seeking a facilitator or collaborator for long-term programmes and initiatives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2 class="cta-title">Ready to Work Together?</h2>
+    <p>Tell me what you need — a speaker, a counsellor, a trainer, or a mentor. Let's figure out how I can best serve you or your organisation.</p>
+    <div class="cta-buttons">
+      <a href="/connect.html" class="btn-white">Send an Enquiry</a>
+      <a href="/index.html#speaking" class="btn-ghost">Book Me to Speak</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Ability Christopher &nbsp;·&nbsp; Educator | Counsellor | Public Speaker &nbsp;·&nbsp; <a href="mailto:abilityc86@gmail.com">abilityc86@gmail.com</a></p>
+  </footer>
+
 </body>
 </html>
