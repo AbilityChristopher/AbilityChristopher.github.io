@@ -1,7 +1,7 @@
 README.md
 # Hi, I'm Ability Christopher 👋
 
-## Educator | Counsellor | Mentor
+## Educator | Counsellor | Public Speaker 
 
 I am passionate about empowering people through education, mentorship, advocacy, counselling, and digital transformation.
 
