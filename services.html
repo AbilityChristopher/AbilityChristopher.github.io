@@ -74,7 +74,7 @@
 
     .nav-links a:hover,
     .nav-links a.active { color: var(--gold); }
-    
+
     /* ── PAGE HEADER ── */
     .page-header {
       background: var(--ink);
@@ -416,7 +416,18 @@
     }
 
     /* ── MOBILE ── */
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;z-index:101}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--ink);transition:all 0.3s;transform-origin:center}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--ink);text-decoration:none;transition:color 0.2s}
+    .mobile-menu a:hover{color:var(--gold)}
+
     @media (max-width: 768px) {
+      .hamburger { display: flex; }
       nav .nav-links { display: none; }
 
       .intro {
@@ -443,15 +454,17 @@
   <nav>
     <a href="/index.html" class="nav-logo">Ability Christopher</a>
     <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
       <li><a href="/services.html" class="active">Services</a></li>
       <li><a href="/projects.html">Impact</a></li>
       <li><a href="/gallery.html">Gallery</a></li>
       <li><a href="/blog.html">Blog</a></li>
       <li><a href="/connect.html">Connect</a></li>
     </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
-  
-    <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobile-menu">
     <a href="/index.html" onclick="closeMenu()">Home</a>
     <a href="/services.html" onclick="closeMenu()">Services</a>
@@ -460,7 +473,7 @@
     <a href="/blog.html" onclick="closeMenu()">Blog</a>
     <a href="/connect.html" onclick="closeMenu()">Connect</a>
   </div>
-  
+
   <!-- PAGE HEADER -->
   <header class="page-header">
     <div class="page-header-inner">
@@ -679,5 +692,11 @@
     <p>© 2026 Ability Christopher &nbsp;·&nbsp; Educator | Counsellor | Public Speaker &nbsp;·&nbsp; <a href="mailto:abilityc86@gmail.com">abilityc86@gmail.com</a></p>
   </footer>
 
+  <script>
+    const hamburger=document.getElementById('hamburger');
+    const mobileMenu=document.getElementById('mobile-menu');
+    hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':''});
+    function closeMenu(){hamburger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow=''}
+  </script>
 </body>
 </html>
