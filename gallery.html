@@ -1,250 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Ability Christopher</title>
-    <meta name="description" content="Community impact projects by Ability Christopher: health outreach, digital literacy training, strategy facilitation, and youth empowerment in Benue State.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fc 0%, #e9eef5 100%);
-            color: #1e2a3e;
-            line-height: 1.6;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            background: white;
-            border-radius: 32px;
-            padding: 50px 40px;
-            box-shadow: 0 30px 50px rgba(0,0,0,0.08);
-        }
-        .nav {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #e2e8f0;
-        }
-        .nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #1e4a6b;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-        .nav a:hover { color: #f59e0b; }
-        h1 {
-            font-size: 2.5rem;
-            color: #0a3b5c;
-            margin-bottom: 10px;
-        }
-        .global-sub {
-            color: #4b5563;
-            margin-bottom: 50px;
-            font-size: 1rem;
-        }
-        .section {
-            margin-bottom: 70px;
-        }
-        .section h2 {
-            font-size: 1.8rem;
-            color: #0a3b5c;
-            border-left: 5px solid #f59e0b;
-            padding-left: 20px;
-            margin-bottom: 15px;
-        }
-        .section-desc {
-            color: #2d4a6e;
-            margin-bottom: 25px;
-            font-size: 1rem;
-            max-width: 90%;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 25px;
-        }
-        .gallery-item {
-            background: #f9f9ff;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-            cursor: pointer;
-        }
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 28px rgba(0,0,0,0.1);
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-        }
-        .caption {
-            padding: 12px;
-            font-size: 0.85rem;
-            color: #1e4a6b;
-            text-align: center;
-            font-weight: 500;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.9);
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-        .modal img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
-        }
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 24px;
-            border-top: 1px solid #e2e8f0;
-            font-size: 0.9rem;
-        }
-        @media (max-width: 700px) {
-            .container { padding: 30px 20px; }
-            h1 { font-size: 1.8rem; }
-            .nav a { margin: 0 12px; font-size: 0.9rem; }
-            .section-desc { max-width: 100%; }
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Gallery — Ability Christopher. Photos from community outreach, training sessions, NYSC service, speaking engagements and more."/>
+  <title>Gallery | Ability Christopher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--ink:#0f0f0f;--paper:#f7f4ef;--gold:#b8922a;--gold-light:#d4aa4a;--warm-mid:#e8e2d9;--muted:#7a7065;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.7;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5%;background:rgba(247,244,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--warm-mid)}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--ink);text-decoration:none;z-index:101}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{font-size:0.85rem;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;z-index:101}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--ink);transition:all 0.3s;transform-origin:center}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--ink);text-decoration:none;transition:color 0.2s}
+    .mobile-menu a:hover{color:var(--gold)}
+    .page-header{background:var(--ink);padding:9rem 5% 5rem;position:relative;overflow:hidden}
+    .page-header::before{content:'GALLERY';position:absolute;right:1%;top:50%;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-size:clamp(4rem,11vw,10rem);font-weight:700;color:rgba(255,255,255,0.03);letter-spacing:0.05em;pointer-events:none;white-space:nowrap}
+    .page-header-inner{max-width:1200px;margin:0 auto}
+    .section-label{font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1rem;display:block}
+    .page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:1.2rem}
+    .page-subtitle{font-size:1.05rem;font-weight:300;color:rgba(255,255,255,0.5);max-width:520px;line-height:1.8}
+    .filter-bar{max-width:1200px;margin:0 auto;padding:3rem 5% 0;display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap}
+    .filter-label{font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-right:0.5rem}
+    .filter-btn{font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;padding:0.45rem 1.1rem;border:1px solid var(--warm-mid);background:transparent;color:var(--muted);cursor:pointer;transition:all 0.2s;border-radius:2px}
+    .filter-btn:hover{border-color:var(--gold);color:var(--gold)}
+    .filter-btn.active{background:var(--ink);border-color:var(--ink);color:var(--white)}
+    .gallery-sections{max-width:1200px;margin:0 auto;padding:3rem 5% 6rem}
+    .gallery-section{margin-bottom:5rem}
+    .section-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--warm-mid);flex-wrap:wrap;gap:1rem}
+    .section-title-text{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--ink);line-height:1.1}
+    .section-count{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+    .photo-grid{columns:3;column-gap:1rem}
+    .photo-item{break-inside:avoid;margin-bottom:1rem;position:relative;overflow:hidden;cursor:pointer;background:var(--warm-mid)}
+    .photo-item img{width:100%;display:block;transition:transform 0.4s ease;object-fit:cover}
+    .photo-item:hover img{transform:scale(1.04)}
+    .photo-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(15,15,15,0.85));padding:2rem 1rem 1rem;transform:translateY(100%);transition:transform 0.3s ease}
+    .photo-item:hover .photo-caption{transform:translateY(0)}
+    .photo-caption-text{font-size:0.82rem;color:var(--white);font-weight:400;line-height:1.45}
+    .photo-caption-tag{font-size:0.65rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-light);display:block;margin-bottom:0.3rem}
+    .photo-placeholder{width:100%;background:linear-gradient(135deg,#1a2a3a,#0f1a26);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 1.5rem;text-align:center;min-height:200px}
+    .placeholder-icon{font-size:2.5rem;margin-bottom:0.8rem;opacity:0.5}
+    .placeholder-label{font-size:0.75rem;color:rgba(255,255,255,0.3);letter-spacing:0.06em;text-transform:uppercase}
+    .coming-soon-badge{font-size:0.65rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;background:rgba(184,146,42,0.3);color:var(--gold-light);padding:0.2rem 0.6rem;border-radius:2px;margin-top:0.5rem;display:inline-block}
+    .lightbox{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.92);z-index:200;align-items:center;justify-content:center;padding:2rem}
+    .lightbox.open{display:flex}
+    .lightbox-inner{position:relative;max-width:900px;width:100%;text-align:center}
+    .lightbox img{max-width:100%;max-height:80vh;object-fit:contain;display:block;margin:0 auto}
+    .lightbox-caption{color:rgba(255,255,255,0.7);font-size:0.9rem;margin-top:1rem;font-weight:300}
+    .lightbox-close{position:absolute;top:-2.5rem;right:0;background:none;border:none;color:var(--white);font-size:1.8rem;cursor:pointer;padding:0.5rem;line-height:1;opacity:0.7;transition:opacity 0.2s}
+    .lightbox-close:hover{opacity:1}
+    .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:none;color:var(--white);font-size:1.5rem;cursor:pointer;padding:1rem 1.2rem;transition:background 0.2s;line-height:1}
+    .lightbox-nav:hover{background:rgba(255,255,255,0.25)}
+    .lightbox-prev{left:-4rem}
+    .lightbox-next{right:-4rem}
+    .gallery-cta{background:var(--gold);padding:5rem 5%;text-align:center}
+    .gallery-cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:var(--white);margin-bottom:1rem}
+    .gallery-cta p{font-size:1rem;color:rgba(255,255,255,0.85);max-width:440px;margin:0 auto 2rem;font-weight:300;line-height:1.75}
+    .btn-white{background:var(--white);color:var(--gold);padding:0.9rem 2.2rem;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:opacity 0.2s}
+    .btn-white:hover{opacity:0.88}
+    footer{background:#0a0a0a;color:rgba(255,255,255,0.4);text-align:center;padding:2.5rem 5%;font-size:0.8rem;letter-spacing:0.04em}
+    footer a{color:var(--gold-light);text-decoration:none}
+    @media(max-width:768px){
+      .hamburger{display:flex}
+      nav .nav-links{display:none}
+      .photo-grid{columns:2}
+      .lightbox-prev{left:-0.5rem}
+      .lightbox-next{right:-0.5rem}
+      .lightbox-nav{padding:0.7rem 0.9rem;font-size:1.2rem}
+    }
+    @media(max-width:480px){.photo-grid{columns:1}}
+  </style>
 </head>
 <body>
-<div class="container">
-    <div class="nav">
-        <a href="https://abilitychristopher.github.io/">Home</a>
-        <a href="services.html">Services</a>
-        <a href="connect.html">Connect</a>
-        <a href="projects.html">Projects</a>
-        <a href="blog.html">Blog</a>
+
+  <nav>
+    <a href="/index.html" class="nav-logo">Ability Christopher</a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/projects.html">Impact</a></li>
+      <li><a href="/gallery.html" class="active">Gallery</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/connect.html">Connect</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/index.html" onclick="closeMenu()">Home</a>
+    <a href="/services.html" onclick="closeMenu()">Services</a>
+    <a href="/projects.html" onclick="closeMenu()">Impact</a>
+    <a href="/gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="/blog.html" onclick="closeMenu()">Blog</a>
+    <a href="/connect.html" onclick="closeMenu()">Connect</a>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <span class="section-label">In the Field & Beyond</span>
+      <h1 class="page-title">Gallery</h1>
+      <p class="page-subtitle">A visual record of the work, the people, and the moments that define this journey — from NYSC camp to community classrooms.</p>
+    </div>
+  </header>
+
+  <div class="filter-bar">
+    <span class="filter-label">View:</span>
+    <button class="filter-btn active" onclick="filterGallery('all',this)">All Photos</button>
+    <button class="filter-btn" onclick="filterGallery('nysc',this)">🇳🇬 NYSC Camp</button>
+    <button class="filter-btn" onclick="filterGallery('outreach',this)">🤝 MHM Outreach</button>
+    <button class="filter-btn" onclick="filterGallery('strategy',this)">📊 Strategy</button>
+    <button class="filter-btn" onclick="filterGallery('nitda',this)">💻 NITDA DL4ALL</button>
+  </div>
+
+  <div class="gallery-sections">
+
+    <!-- NYSC PLATOON -->
+    <div class="gallery-section" data-category="nysc" id="section-nysc">
+      <div class="section-header">
+        <div>
+          <span class="section-label">Wannune, Benue State · 2025</span>
+          <h2 class="section-title-text">NYSC Orientation Camp — Platoon 04</h2>
+        </div>
+        <span class="section-count">5 Photos</span>
+      </div>
+      <div class="photo-grid">
+        <div class="photo-item" onclick="openLightbox('nysc',0)">
+          <img src="images/Platoon-leader-team1.jpg" alt="Platoon 04 Team"/>
+          <div class="photo-caption"><span class="photo-caption-tag">NYSC Camp · Platoon 04</span><p class="photo-caption-text">Leading Platoon 04 — 21-day orientation camp, Wannune, Tarka LGA, Benue State.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('nysc',1)">
+          <img src="images/Platoon-leader-team2.jpg" alt="Platoon 04 Team"/>
+          <div class="photo-caption"><span class="photo-caption-tag">NYSC Camp · Platoon 04</span><p class="photo-caption-text">The team behind 1st place in Combat Team Marching and 2nd place in AI Debate.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('nysc',2)">
+          <img src="images/Platoon-leader-team3.jpg" alt="Platoon 04 Team"/>
+          <div class="photo-caption"><span class="photo-caption-tag">NYSC Camp · Platoon 04</span><p class="photo-caption-text">Platoon 04 — unity, discipline, and competitive excellence on the parade ground.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('nysc',3)">
+          <img src="images/Platoon-leader-team4.jpg" alt="Platoon 04 Team"/>
+          <div class="photo-caption"><span class="photo-caption-tag">NYSC Camp · Platoon 04</span><p class="photo-caption-text">Leadership is proven through responsibility — every day at camp was proof of that.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('nysc',4)">
+          <img src="images/Platoon-leader-team5.jpg" alt="Platoon 04 Team"/>
+          <div class="photo-caption"><span class="photo-caption-tag">NYSC Camp · Platoon 04</span><p class="photo-caption-text">The people who made every challenge worth showing up for — Platoon 04.</p></div>
+        </div>
+      </div>
     </div>
 
-    <h1>🌟 One Young Person At a Time</h1>
-    <div class="global-sub">Documenting my work in health awareness, digital inclusion, strategy, and leadership</div>
-
-    <!-- ========== SECTION 1: Menstrual Hygiene Management Outreach (NEW, 8 photos) ========== -->
-    <div class="section">
-        <h2>🩸 Menstrual Hygiene Management Awareness Initiative</h2>
-        <div class="section-desc">
-            As part of my community development engagement during service year, I participated in an MHM sensitization program organized through Ser-Av Foundation in collaboration with partner organizations. The outreach was conducted for students of LGEA Primary School and Universal Basic Education (UBE) Kanshio, Makurdi, Benue State, promoting menstrual health awareness, personal hygiene education, and informed health practices among young learners. This initiative contributed to meaningful conversations around health education, student wellbeing, and youth empowerment.
+    <!-- MHM OUTREACH -->
+    <div class="gallery-section" data-category="outreach" id="section-outreach">
+      <div class="section-header">
+        <div>
+          <span class="section-label">Kanshio & Wadata, Benue State · 2026</span>
+          <h2 class="section-title-text">MHM Outreach — Breaking the Silence</h2>
         </div>
-        <div class="gallery-grid">
-            <!-- 8 MHM images named exactly as below -->
-            <div class="gallery-item"><img src="images/Ability-christopher-MHM-impact1.jpg" alt="MHM outreach 1"><div class="caption">Menstrual Hygiene Awareness – LGEA Primary School</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-MHM-impact2.jpg" alt="MHM outreach 2"><div class="caption">Health education session with students</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-MHM-impact3.jpg" alt="MHM outreach 3"><div class="caption">Collaboration with Ser-Av Foundation & partners</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-MHM-impact4.jpg" alt="MHM outreach 4"><div class="caption">Promoting wellbeing and informed health practices</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-MHM-impact5.jpg" alt="MHM outreach 5"><div class="caption">Engaging young learners on menstrual hygiene</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-MHM-impact6.jpg" alt="MHM outreach 6"><div class="caption">Community development through health awareness</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-MHM-impact7.jpg" alt="MHM outreach 7"><div class="caption">Supporting student wellbeing in Makurdi</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-MHM-impact8.jpg" alt="MHM outreach 8"><div class="caption">Empowering girls through knowledge and care</div></div>
+        <span class="section-count">8 Photos</span>
+      </div>
+      <div class="photo-grid">
+        <div class="photo-item" onclick="openLightbox('outreach',0)">
+          <img src="images/Ability-christopher-MHM-impact1.jpg" alt="MHM Outreach"/>
+          <div class="photo-caption"><span class="photo-caption-tag">MHM Sensitisation</span><p class="photo-caption-text">Menstrual hygiene awareness session — LGEA Primary School, Kanshio.</p></div>
         </div>
+        <div class="photo-item" onclick="openLightbox('outreach',1)">
+          <img src="images/Ability-christopher-MHM-impact2.jpg" alt="MHM Outreach"/>
+          <div class="photo-caption"><span class="photo-caption-tag">MHM Sensitisation</span><p class="photo-caption-text">Interactive learning with students — breaking stigma one conversation at a time.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('outreach',2)">
+          <img src="images/Ability-christopher-MHM-impact3.jpg" alt="MHM Outreach"/>
+          <div class="photo-caption"><span class="photo-caption-tag">MHM Sensitisation</span><p class="photo-caption-text">UBE Kanshio — creating safe spaces for honest conversations about menstrual health.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('outreach',3)">
+          <img src="images/Ability-christopher-MHM-impact4.jpg" alt="MHM Outreach"/>
+          <div class="photo-caption"><span class="photo-caption-tag">MHM Sensitisation</span><p class="photo-caption-text">NKST Primary School, Wadata — reaching more students with critical health education.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('outreach',4)">
+          <img src="images/Ability-christopher-MHM-impact5.jpg" alt="MHM Outreach"/>
+          <div class="photo-caption"><span class="photo-caption-tag">MHM Sensitisation</span><p class="photo-caption-text">UBE Wadata — education that protects dignity and keeps girls in school.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('outreach',5)">
+          <img src="images/Ability-christopher-MHM-impact6.jpg" alt="MHM Outreach"/>
+          <div class="photo-caption"><span class="photo-caption-tag">MHM Sensitisation</span><p class="photo-caption-text">Facilitating awareness across 4 schools — community health outreach in action.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('outreach',6)">
+          <img src="images/Ability-christopher-MHM-impact7.jpg" alt="MHM Outreach"/>
+          <div class="photo-caption"><span class="photo-caption-tag">MHM Sensitisation</span><p class="photo-caption-text">The silence ends here — young people equipped with knowledge and confidence.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('outreach',7)">
+          <img src="images/Ability-christopher-MHM-impact8.jpg" alt="MHM Outreach"/>
+          <div class="photo-caption"><span class="photo-caption-tag">MHM Sensitisation</span><p class="photo-caption-text">Real conversations, real impact — Benue State community health outreach.</p></div>
+        </div>
+      </div>
     </div>
 
-    <!-- ========== SECTION 2: NITDA DL4ALL Digital Literacy ========== -->
-    <div class="section">
-        <h2>💻 Digital Literacy for All – NITDA DL4ALL</h2>
-        <div class="section-desc">
-            Facilitated digital skills training for members of the informal sector in Benue State. Covered basic computer literacy, internet navigation, online safety, and digital communication – empowering individuals to participate in the digital economy.
+    <!-- STRATEGY PRESENTATION -->
+    <div class="gallery-section" data-category="strategy" id="section-strategy">
+      <div class="section-header">
+        <div>
+          <span class="section-label">Ser-Av Foundation, Makurdi · 2026</span>
+          <h2 class="section-title-text">Strategy Presentation — Ser-Av Foundation</h2>
         </div>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="images/Ability-christopher-NITDA1.jpg" alt="Digital literacy training 1"><div class="caption">Empowering communities through digital literacy – NITDA DL4ALL</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-NITDA2.jpg" alt="Digital literacy training 2"><div class="caption">Empowering communities through digital literacy – NITDA DL4ALL</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-NITDA3.jpg" alt="Digital literacy training 3"><div class="caption">Empowering communities through digital literacy – NITDA DL4ALL</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-NITDA4.jpg" alt="Digital literacy training 4"><div class="caption">Empowering communities through digital literacy – NITDA DL4ALL</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-NITDA5.jpg" alt="Digital literacy training 5"><div class="caption">Empowering communities through digital literacy – NITDA DL4ALL</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-NITDA6.jpg" alt="Digital literacy training 6"><div class="caption">Empowering communities through digital literacy – NITDA DL4ALL</div></div>
+        <span class="section-count">7 Photos</span>
+      </div>
+      <div class="photo-grid">
+        <div class="photo-item" onclick="openLightbox('strategy',0)">
+          <img src="images/Ability-christopher-strategy presentation .jpg" alt="Strategy Presentation"/>
+          <div class="photo-caption"><span class="photo-caption-tag">Ser-Av Foundation</span><p class="photo-caption-text">Leading a strategy workshop that reduced operational friction by 30% at Ser-Av Foundation.</p></div>
         </div>
+        <div class="photo-item" onclick="openLightbox('strategy',1)">
+          <img src="images/Ability-christopher-strategy presentation 1.jpg" alt="Strategy Presentation"/>
+          <div class="photo-caption"><span class="photo-caption-tag">Ser-Av Foundation</span><p class="photo-caption-text">Presenting strategic frameworks to the NGO team — turning insight into action.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('strategy',2)">
+          <img src="images/Ability-christopher-strategy presentation 2.jpg" alt="Strategy Presentation"/>
+          <div class="photo-caption"><span class="photo-caption-tag">Ser-Av Foundation</span><p class="photo-caption-text">Engaging the team in identifying bottlenecks and building better processes.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('strategy',3)">
+          <img src="images/Ability-christopher-strategy presentation 3.jpg" alt="Strategy Presentation"/>
+          <div class="photo-caption"><span class="photo-caption-tag">Ser-Av Foundation</span><p class="photo-caption-text">Interactive strategy session — every voice in the room counted.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('strategy',4)">
+          <img src="images/Ability-christopher-strategy presentation 4.jpg" alt="Strategy Presentation"/>
+          <div class="photo-caption"><span class="photo-caption-tag">Ser-Av Foundation</span><p class="photo-caption-text">Collaborative planning — aligning the team around shared goals and clearer systems.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('strategy',5)">
+          <img src="images/Ability-christopher-strategy presentation 5.jpg" alt="Strategy Presentation"/>
+          <div class="photo-caption"><span class="photo-caption-tag">Ser-Av Foundation</span><p class="photo-caption-text">Wrapping up a productive strategy session — the work continues beyond the room.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('strategy',6)">
+          <img src="images/Ability-christopher-strategy presentation 6.jpg" alt="Strategy Presentation"/>
+          <div class="photo-caption"><span class="photo-caption-tag">Ser-Av Foundation</span><p class="photo-caption-text">Impact is built in sessions like this — where ideas meet commitment.</p></div>
+        </div>
+      </div>
     </div>
 
-    <!-- ========== SECTION 3: Ser-Av Foundation – Strategy & Program Design ========== -->
-    <div class="section">
-        <h2>📊 Ser-Av Foundation – Strategy & Program Design</h2>
-        <div class="section-desc">
-            Led strategy sessions to improve operational efficiency, institutional partnerships, and human resource alignment. Focused on empowering women and youth through digital skills, advocacy, and community-driven programs.
+    <!-- NITDA DL4ALL — ready for photos -->
+    <div class="gallery-section" data-category="nitda" id="section-nitda">
+      <div class="section-header">
+        <div>
+          <span class="section-label">NITDA DL4ALL Initiative · 2025–2026</span>
+          <h2 class="section-title-text">Digital Literacy For All — NITDA DL4ALL</h2>
         </div>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="images/Ability-christopher-strategy%20presentation.jpg" alt="Strategy presentation"><div class="caption">Ser-Av Foundation Strategy Presentation</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-strategy%20presentation%201.jpg" alt="Strategy session 1"><div class="caption">Ser-Av Foundation Strategy Presentation</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-strategy%20presentation%202.jpg" alt="Strategy session 2"><div class="caption">Ser-Av Foundation Strategy Presentation</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-strategy%20presentation%203.jpg" alt="Strategy session 3"><div class="caption">Ser-Av Foundation Strategy Presentation</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-strategy%20presentation%204.jpg" alt="Strategy session 4"><div class="caption">Ser-Av Foundation Strategy Presentation</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-strategy%20presentation%205.jpg" alt="Strategy session 5"><div class="caption">Ser-Av Foundation Strategy Presentation</div></div>
-            <div class="gallery-item"><img src="images/Ability-christopher-strategy%20presentation%206.jpg" alt="Strategy session 6"><div class="caption">Ser-Av Foundation Strategy Presentation</div></div>
+        <span class="section-count">6 Photos</span>
+      </div>
+      <div class="photo-grid">
+        <div class="photo-item" onclick="openLightbox('nitda',0)">
+          <img src="images/Ability-christopher-NITDA1.jpg" alt="NITDA DL4ALL"
+            onerror="this.closest('.photo-item').innerHTML='<div class=\'photo-placeholder\'><div class=\'placeholder-icon\'>💻</div><div class=\'placeholder-label\'>NITDA DL4ALL · Coming Soon</div><span class=\'coming-soon-badge\'>Photo uploading soon</span></div>'"/>
+          <div class="photo-caption"><span class="photo-caption-tag">NITDA DL4ALL</span><p class="photo-caption-text">Training session 1 — digital literacy for informal sector workers, Benue State.</p></div>
         </div>
+        <div class="photo-item" onclick="openLightbox('nitda',1)">
+          <img src="images/Ability-christopher-NITDA2.jpg" alt="NITDA DL4ALL"
+            onerror="this.closest('.photo-item').innerHTML='<div class=\'photo-placeholder\'><div class=\'placeholder-icon\'>💻</div><div class=\'placeholder-label\'>NITDA DL4ALL · Coming Soon</div><span class=\'coming-soon-badge\'>Photo uploading soon</span></div>'"/>
+          <div class="photo-caption"><span class="photo-caption-tag">NITDA DL4ALL</span><p class="photo-caption-text">Training session 2 — smartphone basics, mobile banking, and internet safety.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('nitda',2)">
+          <img src="images/Ability-christopher-NITDA3.jpg" alt="NITDA DL4ALL"
+            onerror="this.closest('.photo-item').innerHTML='<div class=\'photo-placeholder\'><div class=\'placeholder-icon\'>💻</div><div class=\'placeholder-label\'>NITDA DL4ALL · Coming Soon</div><span class=\'coming-soon-badge\'>Photo uploading soon</span></div>'"/>
+          <div class="photo-caption"><span class="photo-caption-tag">NITDA DL4ALL</span><p class="photo-caption-text">Training session 3 — 500+ individuals reached through the federal DL4ALL initiative.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('nitda',3)">
+          <img src="images/Ability-christopher-NITDA4.jpg" alt="NITDA DL4ALL"
+            onerror="this.closest('.photo-item').innerHTML='<div class=\'photo-placeholder\'><div class=\'placeholder-icon\'>💻</div><div class=\'placeholder-label\'>NITDA DL4ALL · Coming Soon</div><span class=\'coming-soon-badge\'>Photo uploading soon</span></div>'"/>
+          <div class="photo-caption"><span class="photo-caption-tag">NITDA DL4ALL</span><p class="photo-caption-text">Training session 4 — bringing digital inclusion to those left behind by the digital economy.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('nitda',4)">
+          <img src="images/Ability-christopher-NITDA5.jpg" alt="NITDA DL4ALL"
+            onerror="this.closest('.photo-item').innerHTML='<div class=\'photo-placeholder\'><div class=\'placeholder-icon\'>💻</div><div class=\'placeholder-label\'>NITDA DL4ALL · Coming Soon</div><span class=\'coming-soon-badge\'>Photo uploading soon</span></div>'"/>
+          <div class="photo-caption"><span class="photo-caption-tag">NITDA DL4ALL</span><p class="photo-caption-text">Training session 5 — practical, jargon-free digital skills for everyday life and business.</p></div>
+        </div>
+        <div class="photo-item" onclick="openLightbox('nitda',5)">
+          <img src="images/Ability-christopher-NITDA6.jpg" alt="NITDA DL4ALL"
+            onerror="this.closest('.photo-item').innerHTML='<div class=\'photo-placeholder\'><div class=\'placeholder-icon\'>💻</div><div class=\'placeholder-label\'>NITDA DL4ALL · Coming Soon</div><span class=\'coming-soon-badge\'>Photo uploading soon</span></div>'"/>
+          <div class="photo-caption"><span class="photo-caption-tag">NITDA DL4ALL</span><p class="photo-caption-text">Training session 6 — because no one should be left behind in the digital world.</p></div>
+        </div>
+      </div>
     </div>
 
-    <!-- ========== SECTION 4: NYSC Platoon 04 – Leadership & Team Victories ========== -->
-    <div class="section">
-        <h2>🏆 NYSC Platoon 04 – Leadership & Team Victories</h2>
-        <div class="section-desc">
-            As Platoon Leader, led my platoon to multiple competition victories including 1st place in Combat Marching, 2nd in AI Debate, and top finishes in volleyball, cultural carnival, and SAED Expozy. Demonstrated teamwork, strategy, and public engagement.
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="images/Platoon-leader-team1.jpg" alt="Platoon victory 1"><div class="caption">Platoon leader and team victory – NYSC camp achievements</div></div>
-            <div class="gallery-item"><img src="images/Platoon-leader-team2.jpg" alt="Platoon victory 2"><div class="caption">Platoon leader and team victory – NYSC camp achievements</div></div>
-            <div class="gallery-item"><img src="images/Platoon-leader-team3.jpg" alt="Platoon victory 3"><div class="caption">Platoon leader and team victory – NYSC camp achievements</div></div>
-            <div class="gallery-item"><img src="images/Platoon-leader-team4.jpg" alt="Platoon victory 4"><div class="caption">Platoon leader and team victory – NYSC camp achievements</div></div>
-            <div class="gallery-item"><img src="images/Platoon-leader-team5.jpg" alt="Platoon victory 5"><div class="caption">Platoon leader and team victory – NYSC camp achievements</div></div>
-        </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&#8249;</button>
+      <img id="lightbox-img" src="" alt=""/>
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+      <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&#8250;</button>
     </div>
+  </div>
 
-    <footer>© 2026 Ability Christopher – Capturing impact, one moment at a time</footer>
-</div>
+  <section class="gallery-cta">
+    <h2 class="gallery-cta-title">Want to Invite Me to Your Event?</h2>
+    <p>If you'd like me to speak, train, or collaborate — let's make it happen.</p>
+    <a href="/connect.html" class="btn-white">Get in Touch</a>
+  </section>
 
-<!-- Lightbox Modal -->
-<div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="close-modal" onclick="closeModal()">&times;</span>
-    <img id="modalImage" src="">
-</div>
+  <footer>
+    <p>© 2026 Ability Christopher &nbsp;·&nbsp; Educator | Counsellor | Public Speaker &nbsp;·&nbsp; <a href="mailto:abilityc86@gmail.com">abilityc86@gmail.com</a></p>
+  </footer>
 
-<script>
-    const images = document.querySelectorAll('.gallery-item img');
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-
-    images.forEach(img => {
-        img.addEventListener('click', function(e) {
-            e.stopPropagation();
-            modal.style.display = 'flex';
-            modalImg.src = this.src;
-        });
+  <script>
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
     });
-
-    function closeModal() {
-        modal.style.display = 'none';
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
     }
 
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.style.display === 'flex') {
-            closeModal();
-        }
+    // Filter
+    function filterGallery(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-section').forEach(section => {
+        section.style.display = (category === 'all' || section.dataset.category === category) ? 'block' : 'none';
+      });
+    }
+
+    // Lightbox data — exact filenames from GitHub
+    const imageData = {
+      nysc: [
+        {src:'images/Platoon-leader-team1.jpg', cap:'Platoon 04 Leadership — Wannune, Tarka LGA, Benue State'},
+        {src:'images/Platoon-leader-team2.jpg', cap:'The team behind 1st place Marching and 2nd place AI Debate'},
+        {src:'images/Platoon-leader-team3.jpg', cap:'Platoon 04 — unity, discipline, and competitive excellence'},
+        {src:'images/Platoon-leader-team4.jpg', cap:'Leadership proven through responsibility — every day at camp'},
+        {src:'images/Platoon-leader-team5.jpg', cap:'Platoon 04 — the team that made every challenge worth it'}
+      ],
+      outreach: [
+        {src:'images/Ability-christopher-MHM-impact1.jpg', cap:'MHM sensitisation — LGEA Primary School, Kanshio'},
+        {src:'images/Ability-christopher-MHM-impact2.jpg', cap:'Breaking stigma one conversation at a time'},
+        {src:'images/Ability-christopher-MHM-impact3.jpg', cap:'UBE Kanshio — safe spaces for honest health conversations'},
+        {src:'images/Ability-christopher-MHM-impact4.jpg', cap:'NKST Primary School, Wadata — health education in action'},
+        {src:'images/Ability-christopher-MHM-impact5.jpg', cap:'UBE Wadata — keeping girls in school with knowledge'},
+        {src:'images/Ability-christopher-MHM-impact6.jpg', cap:'Community health outreach across 4 schools, 2 communities'},
+        {src:'images/Ability-christopher-MHM-impact7.jpg', cap:'Young people equipped with knowledge and confidence'},
+        {src:'images/Ability-christopher-MHM-impact8.jpg', cap:'Real conversations, real impact — Benue State outreach'}
+      ],
+      strategy: [
+        {src:'images/Ability-christopher-strategy presentation .jpg', cap:'Strategy workshop — 30% operational improvement at Ser-Av Foundation'},
+        {src:'images/Ability-christopher-strategy presentation 1.jpg', cap:'Presenting strategic frameworks to the NGO team'},
+        {src:'images/Ability-christopher-strategy presentation 2.jpg', cap:'Identifying bottlenecks and building better processes'},
+        {src:'images/Ability-christopher-strategy presentation 3.jpg', cap:'Interactive strategy session — every voice in the room counted'},
+        {src:'images/Ability-christopher-strategy presentation 4.jpg', cap:'Aligning the team around shared goals and clearer systems'},
+        {src:'images/Ability-christopher-strategy presentation 5.jpg', cap:'Wrapping up — the work continues beyond the room'},
+        {src:'images/Ability-christopher-strategy presentation 6.jpg', cap:'Impact is built in sessions like this — where ideas meet commitment'}
+      ],
+      nitda: [
+        {src:'images/Ability-christopher-NITDA1.jpg', cap:'NITDA DL4ALL — digital literacy training, session 1'},
+        {src:'images/Ability-christopher-NITDA2.jpg', cap:'NITDA DL4ALL — smartphone basics, mobile banking, internet safety'},
+        {src:'images/Ability-christopher-NITDA3.jpg', cap:'NITDA DL4ALL — 500+ individuals reached through the federal initiative'},
+        {src:'images/Ability-christopher-NITDA4.jpg', cap:'NITDA DL4ALL — bringing digital inclusion to the informal sector'},
+        {src:'images/Ability-christopher-NITDA5.jpg', cap:'NITDA DL4ALL — practical, jargon-free digital skills for everyday life'},
+        {src:'images/Ability-christopher-NITDA6.jpg', cap:'NITDA DL4ALL — no one should be left behind in the digital world'}
+      ]
+    };
+
+    let currentImages = [];
+    let currentIndex = 0;
+
+    function openLightbox(category, index) {
+      currentImages = imageData[category];
+      currentIndex = index;
+      showLightboxImage();
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function showLightboxImage() {
+      const item = currentImages[currentIndex];
+      document.getElementById('lightbox-img').src = item.src;
+      document.getElementById('lightbox-img').alt = item.cap;
+      document.getElementById('lightbox-caption').textContent = item.cap;
+    }
+
+    function navigateLightbox(dir) {
+      currentIndex = (currentIndex + dir + currentImages.length) % currentImages.length;
+      showLightboxImage();
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function closeLightboxOutside(e) {
+      if (e.target.id === 'lightbox') closeLightbox();
+    }
+
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'ArrowRight') navigateLightbox(1);
+      if (e.key === 'ArrowLeft') navigateLightbox(-1);
+      if (e.key === 'Escape') closeLightbox();
     });
-</script>
+  </script>
 </body>
 </html>
