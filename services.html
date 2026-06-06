@@ -75,6 +75,31 @@
     .nav-links a:hover,
     .nav-links a.active { color: var(--gold); }
 
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+      z-index: 101;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--ink);
+      transition: all 0.3s;
+      transform-origin: center;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
     /* ── PAGE HEADER ── */
     .page-header {
       background: var(--ink);
@@ -450,15 +475,6 @@
       <li><a href="/connect.html">Connect</a></li>
     </ul>
   </nav>
-
-    <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="/index.html" onclick="closeMenu()">Home</a>
-    <a href="/projects.html" onclick="closeMenu()">Impact</a>
-    <a href="/gallery.html" onclick="closeMenu()">Gallery</a>
-    <a href="/blog.html" onclick="closeMenu()">Blog</a>
-    <a href="/connect.html" onclick="closeMenu()">Connect</a>
-  </div>
   
   <!-- PAGE HEADER -->
   <header class="page-header">
