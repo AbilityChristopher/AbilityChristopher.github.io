@@ -1,118 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>God Gave You Potential | Ability Christopher</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-            color: #1e2a3e;
-            line-height: 1.6;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(2px);
-            border-radius: 32px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        .nav {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #cbd5e1;
-        }
-        .nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #0a3b5c;
-            font-weight: 600;
-        }
-        .nav a:hover {
-            color: #f59e0b;
-        }
-        h1 {
-            font-size: 2.2rem;
-            color: #0a3b5c;
-            margin-bottom: 10px;
-        }
-        .post-date {
-            color: #5c6f87;
-            margin-bottom: 25px;
-            border-left: 4px solid #f59e0b;
-            padding-left: 12px;
-        }
-        blockquote {
-            font-style: italic;
-            background: #fef9e6;
-            padding: 20px;
-            border-radius: 20px;
-            margin: 25px 0;
-            border-left: 5px solid #f59e0b;
-        }
-        .back-to-blog {
-            display: inline-block;
-            margin-top: 30px;
-            color: #0a3b5c;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 0.85rem;
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="God Gave You Potential — Now What? by Ability Christopher"/>
+  <title>God Gave You Potential — Now What? | Ability Christopher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--ink:#0f0f0f;--paper:#f7f4ef;--gold:#b8922a;--gold-light:#d4aa4a;--warm-mid:#e8e2d9;--muted:#7a7065;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.7;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5%;background:rgba(247,244,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--warm-mid)}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--ink);text-decoration:none;z-index:101}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{font-size:0.85rem;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;z-index:101}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--ink);transition:all 0.3s;transform-origin:center}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--ink);text-decoration:none;transition:color 0.2s}
+    .mobile-menu a:hover{color:var(--gold)}
+    .post-hero{background:var(--ink);padding:9rem 5% 5rem;position:relative;overflow:hidden}
+    .post-hero::before{content:'✨';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:clamp(6rem,15vw,14rem);opacity:0.07;pointer-events:none}
+    .post-hero-inner{max-width:800px;margin:0 auto}
+    .back-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.78rem;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.45);text-decoration:none;margin-bottom:2rem;transition:color 0.2s}
+    .back-link:hover{color:var(--gold-light)}
+    .post-cat{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1rem;display:block}
+    .post-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:1.5rem}
+    .post-meta{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.78rem;color:rgba(255,255,255,0.4);letter-spacing:0.05em}
+    .post-body{max-width:800px;margin:0 auto;padding:5rem 5% 6rem}
+    .post-body p{font-size:1.05rem;color:#3a3530;line-height:1.9;font-weight:300;margin-bottom:1.8rem}
+    .post-body h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--ink);margin:2.5rem 0 1rem;line-height:1.2}
+    .post-body blockquote{border-left:3px solid var(--gold);padding:1rem 1.5rem;margin:2rem 0;background:var(--warm-mid)}
+    .post-body blockquote p{margin:0;font-style:italic;color:var(--ink);font-weight:400}
+    .post-body strong{font-weight:500;color:var(--ink)}
+    .post-footer{background:var(--gold);padding:5rem 5%;text-align:center}
+    .post-footer-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--white);margin-bottom:0.8rem}
+    .post-footer p{font-size:1rem;color:rgba(255,255,255,0.85);max-width:440px;margin:0 auto 2rem;font-weight:300;line-height:1.75}
+    .btn-white{background:var(--white);color:var(--gold);padding:0.9rem 2.2rem;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:opacity 0.2s;margin-right:1rem}
+    .btn-white:hover{opacity:0.88}
+    .btn-ghost{background:transparent;color:var(--white);padding:0.9rem 2.2rem;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border:2px solid rgba(255,255,255,0.5);display:inline-block;transition:background 0.2s}
+    .btn-ghost:hover{background:rgba(255,255,255,0.15)}
+    footer{background:#0a0a0a;color:rgba(255,255,255,0.4);text-align:center;padding:2.5rem 5%;font-size:0.8rem;letter-spacing:0.04em}
+    footer a{color:var(--gold-light);text-decoration:none}
+    @media(max-width:768px){.hamburger{display:flex}nav .nav-links{display:none}}
+  </style>
 </head>
 <body>
-<div class="container">
-    <div class="nav">
-        <a href="https://abilitychristopher.github.io/">Home</a>
-        <a href="services.html">Services</a>
-        <a href="connect.html">Connect</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
+  <nav>
+    <a href="/index.html" class="nav-logo">Ability Christopher</a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/projects.html">Impact</a></li>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/connect.html">Connect</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/index.html" onclick="closeMenu()">Home</a>
+    <a href="/services.html" onclick="closeMenu()">Services</a>
+    <a href="/projects.html" onclick="closeMenu()">Impact</a>
+    <a href="/gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="/blog.html" onclick="closeMenu()">Blog</a>
+    <a href="/connect.html" onclick="closeMenu()">Connect</a>
+  </div>
+  <header class="post-hero">
+    <div class="post-hero-inner">
+      <a href="/blog.html" class="back-link">← Back to Blog</a>
+      <span class="post-cat">💭 Personal Reflections</span>
+      <h1 class="post-title">God Gave You Potential — Now What?</h1>
+      <div class="post-meta">
+        <span>📅 2026</span>
+        <span>⏱ 4 min read</span>
+        <span>✍️ Ability Christopher</span>
+      </div>
     </div>
-
-    <h1>God Gave You Potential ❤️</h1>
-    <div class="post-date">📅 23 May 2026 • 4 min read</div>
-
-    <p>When God created human beings, He spoke to Himself. You came forth from God because He planned that we would be spirit – just as He is Spirit.</p>
-
-    <p>Yet too many people never discover God’s purpose for creating them. They search for meaning in achievements, possessions, and the approval of others… but not in the One who designed them.</p>
-
-    <blockquote>
-        The result? Lives that feel unfulfilled. Dreams that never take shape. Potential that remains buried.
-    </blockquote>
-
-    <p>But here’s the truth:<br>
-    You were born with divine potential – placed inside you by the Creator Himself. Your purpose isn’t something you invent; it’s something you discover in Him.</p>
-
-    <p>Don’t waste the gift God placed within you. Start seeking His purpose today.</p>
-
-    <p><strong>Inspired by the timeless words of Dr. Myles Munroe in “Understanding Your Potential.”</strong><br>
-    If you haven’t read it yet, add it to your list – it’s a life-changing guide to unlocking what God has already placed inside you.</p>
-
-    <p>Take a moment today to reflect:<br>
-    <em>Am I living out the potential God placed in me, or have I settled for less than His purpose?</em></p>
-
-    <p>Let’s rise to the level of the potential Heaven invested in us.</p>
-
-    <a href="blog.html" class="back-to-blog">← Back to all posts</a>
-
-    <footer>© 2026 Ability Christopher — Purpose over perfection</footer>
-</div>
+  </header>
+  <article class="post-body">
+    <p>There is a phrase I have heard all my life in churches, classrooms, and motivational speeches across Nigeria: "You have so much potential." It is meant to be encouraging. And it is. But somewhere along the way, I started to wonder — potential for what, exactly? And more importantly, what am I actually doing with it?</p>
+    <p>Because here is the thing nobody tells you: potential is not an achievement. It is a starting point. And a starting point means nothing if you never move.</p>
+    <h2>Potential Is Not an Achievement</h2>
+    <p>A seed has the potential to become a tree. But a seed buried in bad soil, never watered, never given light — remains a seed forever. It never becomes what it was designed to be. The same is true for us. We can be told our whole lives that we are gifted, intelligent, talented, called — and still end up living far below what we were created for, simply because we never moved from potential to action.</p>
+    <blockquote><p>The graveyard is the richest place on earth — full of books that were never written, businesses that were never started, songs that were never sung, and lives that were never fully lived.</p></blockquote>
+    <p>That is a sobering thought. And it should be. Because every one of us carries something that, if left unactivated, will die with us. The question is not whether you have potential. The question is what you are choosing to do with it.</p>
+    <h2>The Accountability That Comes With Gifting</h2>
+    <p>I believe deeply that God gives every person gifts and capacity. But I also believe that the possession of those gifts comes with a responsibility — a stewardship. You are not just a recipient. You are a custodian. And custodians are accountable for what they do with what they have been given.</p>
+    <p>That accountability is not a burden. It is actually a gift in itself. It means your life is not accidental. It means the things you care about, the skills you carry, the experiences you have been through — they are not random. They are raw material. And what you build with that raw material is your contribution to the world.</p>
+    <h2>What Activation Actually Looks Like</h2>
+    <p>Activating your potential does not always look dramatic. It rarely starts on a big stage or in front of a large crowd. It usually starts quietly — with a decision to be consistent, to serve where you are, to keep showing up even when no one is watching.</p>
+    <p>For me, it has looked like showing up to facilitate a digital literacy session for traders who had never used a smartphone. It has looked like sitting with a confused secondary school leaver and helping them see a path forward. It has looked like writing this article at the end of a long day, because I believe the words matter even when the audience is small.</p>
+    <p>None of that is glamorous. All of it is purposeful. And purpose, lived out consistently in small things, is how you build something that lasts.</p>
+    <h2>So — Now What?</h2>
+    <p>If you are reading this and you know — deep down — that you are living below what you are capable of, I want to ask you directly: what is one thing you can do today to begin closing that gap?</p>
+    <p>Not tomorrow. Not when conditions are perfect. Not when you feel more confident or more ready or more equipped. <strong>Today. With what you have. Where you are.</strong></p>
+    <p>God gave you potential. The question was never whether you have it. The question is what you are going to do with it. And only you can answer that.</p>
+  </article>
+  <section class="post-footer">
+    <h2 class="post-footer-title">This one hit different?</h2>
+    <p>Share it with someone who needs the push — or reach out if you want to talk about purpose, direction, or next steps.</p>
+    <a href="/blog.html" class="btn-white">More Articles</a>
+    <a href="/connect.html" class="btn-ghost">Get in Touch</a>
+  </section>
+  <footer>
+    <p>© 2026 Ability Christopher &nbsp;·&nbsp; Educator | Counsellor | Public Speaker &nbsp;·&nbsp; <a href="mailto:abilityc86@gmail.com">abilityc86@gmail.com</a></p>
+  </footer>
+  <script>
+    const hamburger=document.getElementById('hamburger');
+    const mobileMenu=document.getElementById('mobile-menu');
+    hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':''});
+    function closeMenu(){hamburger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow=''}
+  </script>
 </body>
 </html>
