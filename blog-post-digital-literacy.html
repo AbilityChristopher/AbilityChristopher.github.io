@@ -1,176 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Literacy: A Necessity, Not a Luxury| Ability Christopher</title>
-    <meta name="description" content="Digital literacy is no longer a luxury but a necessity for African youth. Learn why it's key to opportunities, education, and economic empowerment.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fc 0%, #e9eef5 100%);
-            color: #1e2a3e;
-            line-height: 1.7;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            border-radius: 32px;
-            padding: 50px 40px;
-            box-shadow: 0 30px 50px rgba(0,0,0,0.08);
-        }
-        .nav {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #e2e8f0;
-        }
-        .nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #1e4a6b;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-        .nav a:hover {
-            color: #f59e0b;
-        }
-        .post-date {
-            color: #f59e0b;
-            font-weight: 500;
-            margin-bottom: 20px;
-            display: block;
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: #0a3b5c;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-        h2 {
-            font-size: 1.8rem;
-            color: #0a3b5c;
-            margin: 40px 0 20px 0;
-            border-bottom: 3px solid #f59e0b;
-            display: inline-block;
-            padding-bottom: 6px;
-        }
-        h3 {
-            font-size: 1.4rem;
-            color: #1e4a6b;
-            margin: 30px 0 15px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        ul, ol {
-            margin: 20px 0 20px 30px;
-        }
-        li {
-            margin: 8px 0;
-        }
-        .back-link {
-            margin-top: 50px;
-            text-align: center;
-        }
-        .back-link a {
-            background: #f59e0b;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .back-link a:hover {
-            background: #0a3b5c;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 24px;
-            border-top: 1px solid #e2e8f0;
-            font-size: 0.9rem;
-        }
-        @media (max-width: 700px) {
-            .container { padding: 30px 20px; }
-            h1 { font-size: 1.8rem; }
-            h2 { font-size: 1.5rem; }
-            .nav a { margin: 0 12px; font-size: 0.9rem; }
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Digital Literacy: A Necessity, Not a Luxury — by Ability Christopher"/>
+  <title>Digital Literacy: A Necessity, Not a Luxury | Ability Christopher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--ink:#0f0f0f;--paper:#f7f4ef;--gold:#b8922a;--gold-light:#d4aa4a;--warm-mid:#e8e2d9;--muted:#7a7065;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.7;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5%;background:rgba(247,244,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--warm-mid)}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--ink);text-decoration:none;z-index:101}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{font-size:0.85rem;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;z-index:101}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--ink);transition:all 0.3s;transform-origin:center}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--ink);text-decoration:none;transition:color 0.2s}
+    .mobile-menu a:hover{color:var(--gold)}
+    .post-hero{background:var(--ink);padding:9rem 5% 5rem;position:relative;overflow:hidden}
+    .post-hero::before{content:'💻';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:clamp(6rem,15vw,14rem);opacity:0.07;pointer-events:none}
+    .post-hero-inner{max-width:800px;margin:0 auto}
+    .back-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.78rem;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.45);text-decoration:none;margin-bottom:2rem;transition:color 0.2s}
+    .back-link:hover{color:var(--gold-light)}
+    .post-cat{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1rem;display:block}
+    .post-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:1.5rem}
+    .post-meta{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.78rem;color:rgba(255,255,255,0.4);letter-spacing:0.05em}
+    .post-body{max-width:800px;margin:0 auto;padding:5rem 5% 6rem}
+    .post-body p{font-size:1.05rem;color:#3a3530;line-height:1.9;font-weight:300;margin-bottom:1.8rem}
+    .post-body h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--ink);margin:2.5rem 0 1rem;line-height:1.2}
+    .post-body blockquote{border-left:3px solid var(--gold);padding:1rem 1.5rem;margin:2rem 0;background:var(--warm-mid)}
+    .post-body blockquote p{margin:0;font-style:italic;color:var(--ink);font-weight:400}
+    .post-body strong{font-weight:500;color:var(--ink)}
+    .post-footer{background:var(--gold);padding:5rem 5%;text-align:center}
+    .post-footer-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--white);margin-bottom:0.8rem}
+    .post-footer p{font-size:1rem;color:rgba(255,255,255,0.85);max-width:440px;margin:0 auto 2rem;font-weight:300;line-height:1.75}
+    .btn-white{background:var(--white);color:var(--gold);padding:0.9rem 2.2rem;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:opacity 0.2s;margin-right:1rem}
+    .btn-white:hover{opacity:0.88}
+    .btn-ghost{background:transparent;color:var(--white);padding:0.9rem 2.2rem;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border:2px solid rgba(255,255,255,0.5);display:inline-block;transition:background 0.2s}
+    .btn-ghost:hover{background:rgba(255,255,255,0.15)}
+    footer{background:#0a0a0a;color:rgba(255,255,255,0.4);text-align:center;padding:2.5rem 5%;font-size:0.8rem;letter-spacing:0.04em}
+    footer a{color:var(--gold-light);text-decoration:none}
+    @media(max-width:768px){.hamburger{display:flex}nav .nav-links{display:none}}
+  </style>
 </head>
 <body>
-<div class="container">
-    <div class="nav">
-        <div class="nav">
-    <a href="https://abilitychristopher.github.io/">Home</a>
-    <a href="services.html">Services</a>
-    <a href="connect.html">Connect</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="projects.html">Projects</a>
-    <a href="blog.html">Blog</a>
-</div>
-
-    <div class="post-date">📅 27th May 2026</div>
-    <h1>Why Digital Literacy Is No Longer Optional for Young People in Africa</h1>
-
-    <p>The world is changing rapidly, and technology is now shaping how we learn, work, communicate, and build opportunities. In today’s digital economy, digital literacy is no longer a luxury — it is a necessity.</p>
-
-    <p>Across Africa, millions of young people possess talent, creativity, and ambition, yet many still lack the digital skills needed to compete globally. The ability to use technology effectively has become one of the most important tools for personal growth, career development, entrepreneurship, and economic empowerment.</p>
-
-    <p>Digital literacy is not just about knowing how to use a smartphone or browse social media. It is about understanding how technology can be used to learn, solve problems, communicate professionally, access opportunities, and create value.</p>
-
-    <h2>What Is Digital Literacy?</h2>
-    <p>Digital literacy refers to the ability to use digital tools, technologies, and online platforms effectively and responsibly.</p>
-    <p>This includes:</p>
-    <ul>
-        <li>Basic computer skills</li>
-        <li>Internet navigation</li>
-        <li>Online communication</li>
-        <li>Digital problem-solving</li>
-        <li>Information evaluation</li>
-        <li>Cybersecurity awareness</li>
-        <li>Content creation</li>
-        <li>Digital collaboration</li>
+  <nav>
+    <a href="/index.html" class="nav-logo">Ability Christopher</a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/projects.html">Impact</a></li>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/connect.html">Connect</a></li>
     </ul>
-    <p>In today’s world, digital literacy is becoming as important as reading and writing.</p>
-
-    <h2>Why Digital Literacy Matters</h2>
-    <h3>1. Access to Opportunities</h3>
-    <p>Many job opportunities today require digital skills. From remote work to online business, technology has opened doors that were once inaccessible. Young people who develop digital literacy skills gain access to remote jobs, freelancing opportunities, online learning platforms, global networking, and digital entrepreneurship. Without digital literacy, many people risk being excluded from the modern economy.</p>
-
-    <h3>2. Education and Continuous Learning</h3>
-    <p>Technology has transformed education. Students can now learn from anywhere in the world through online courses, virtual classrooms, educational videos, digital libraries, and professional certifications. Digital literacy empowers individuals to become lifelong learners.</p>
-
-    <h3>3. Economic Empowerment</h3>
-    <p>The digital economy is creating new industries and career paths. Skills such as digital marketing, graphic design, video editing, data analysis, programming, and content creation can become powerful sources of income and career growth. Digital literacy enables young people to move from consumers of technology to creators of value.</p>
-
-    <h3>4. Improved Communication and Collaboration</h3>
-    <p>Technology has changed how people connect and collaborate. Digital literacy helps individuals communicate professionally, build personal brands, participate in global conversations, collaborate across borders, and share ideas effectively. Strong communication skills combined with digital competence create powerful opportunities.</p>
-
-    <h2>The Digital Divide in Africa</h2>
-    <p>Despite technological advancement, many communities still face limited internet access, lack of digital education, inadequate infrastructure, limited access to devices, and low awareness of digital opportunities. Bridging this digital divide requires collective effort from governments, organizations, educators, and community advocates. Digital inclusion must become a priority.</p>
-
-    <h2>Building a Digitally Empowered Generation</h2>
-    <p>To prepare young people for the future, digital literacy must be integrated into schools, community programmes, youth development initiatives, informal sector training, and career development programmes. Young people should not only learn how to use technology but also how to use it responsibly, creatively, and productively.</p>
-
-    <h2>Conclusion</h2>
-    <p>The future belongs to those who can adapt, learn, and grow in a digital world. Digital literacy is more than a technical skill — it is a pathway to empowerment, innovation, leadership, and opportunity. Africa’s young population has enormous potential. By investing in digital literacy, we can unlock new possibilities, transform communities, and prepare a generation capable of competing and contributing globally. The goal is not simply to use technology, but to use it to create impact.</p>
-
-    <div class="back-link">
-        <a href="https://abilitychristopher.github.io/">← Back to Home</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/index.html" onclick="closeMenu()">Home</a>
+    <a href="/services.html" onclick="closeMenu()">Services</a>
+    <a href="/projects.html" onclick="closeMenu()">Impact</a>
+    <a href="/gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="/blog.html" onclick="closeMenu()">Blog</a>
+    <a href="/connect.html" onclick="closeMenu()">Connect</a>
+  </div>
+  <header class="post-hero">
+    <div class="post-hero-inner">
+      <a href="/blog.html" class="back-link">← Back to Blog</a>
+      <span class="post-cat">📘 Professional Insights</span>
+      <h1 class="post-title">Digital Literacy: A Necessity, Not a Luxury</h1>
+      <div class="post-meta">
+        <span>📅 2026</span>
+        <span>⏱ 5 min read</span>
+        <span>✍️ Ability Christopher</span>
+      </div>
     </div>
-
-    <footer>
-        © 2026 Ability Christopher
-    </footer>
-</div>
+  </header>
+  <article class="post-body">
+    <p>We live in a world that is moving online at a pace many Nigerians have not been prepared for. From banking to job applications, from healthcare to education — the digital space is no longer a nice addition to daily life. It is the main stage. And if you are not on it, you are being left behind.</p>
+    <p>This is not an exaggeration. It is the reality I witnessed firsthand during my work as a certified facilitator under the NITDA DL4ALL initiative — and it is a reality that demands an urgent, honest response.</p>
+    <h2>The Gap Is Real</h2>
+    <p>During my work facilitating digital literacy sessions across Benue State, I sat with hundreds of Nigerians in the informal sector — traders, artisans, small business owners, women in community groups — who had never sent an email, never used mobile banking, and had no idea how to protect themselves from online scams.</p>
+    <p>These are not unintelligent people. They are hardworking, resourceful individuals who simply were never taught the language of the digital world. That is the gap. Not intelligence. Not effort. <strong>Access to knowledge.</strong> And access to knowledge is something we can do something about.</p>
+    <blockquote><p>Digital exclusion is the new illiteracy. And just like illiteracy, it is not the fault of the individual — it is a failure of the systems around them.</p></blockquote>
+    <h2>What Digital Literacy Actually Means</h2>
+    <p>Many people hear "digital literacy" and think it means knowing how to code or operate complex software. It does not. At its most foundational level, digital literacy means being able to navigate a smartphone confidently, send and receive emails, use mobile banking safely, identify scams and protect personal information, and use the internet to find information, access services, and communicate.</p>
+    <p>These are not advanced skills. But without them, a person cannot apply for most formal jobs, cannot access government services online, cannot grow a small business in the digital economy, and is vulnerable to the financial fraud that is rampant in our online spaces. The cost of digital exclusion is not abstract — it is measured in lost income, missed opportunities, and avoidable harm.</p>
+    <h2>Why It Matters More Than Ever</h2>
+    <p>Nigeria has over 100 million internet users — but digital penetration still leaves out millions, particularly in rural areas and among older populations. Meanwhile, the government, banks, and employers are moving more and more processes online. If we do not deliberately bring people along, we create a two-tier society: those who can participate in the digital economy, and those permanently locked out of it.</p>
+    <p>The NITDA DL4ALL initiative is one of the most important federal programmes addressing this gap — and being part of it as a facilitator gave me a front-row seat to both the scale of the problem and the power of the solution. When someone who has never touched a smartphone successfully sends their first message or completes their first mobile transfer, something shifts in them. Confidence. Possibility. Access.</p>
+    <h2>What We Can Do</h2>
+    <p>The solution is not complicated. It requires deliberate, community-based digital literacy programmes that meet people where they are — in markets, community halls, churches, mosques, and schools. It requires facilitators who speak the local language, understand the context, and can make digital tools feel relevant rather than foreign.</p>
+    <p>It also requires young educated Nigerians — especially those of us with the privilege of formal education — to take responsibility for bringing knowledge back to our communities. Digital literacy is not just a government project. It is a community responsibility.</p>
+    <h2>A Final Word</h2>
+    <p>If you can read this article on a screen, you already have an advantage that millions of your fellow Nigerians do not. That advantage comes with a responsibility. Use your digital skills. Share what you know. Advocate for inclusion. And if you are in a position to teach — teach.</p>
+    <p>The digital world is not going to slow down for anyone. But together, we can make sure no one is left behind.</p>
+  </article>
+  <section class="post-footer">
+    <h2 class="post-footer-title">Found this helpful?</h2>
+    <p>Share it with someone who needs it — or get in touch to bring digital literacy training to your community or organisation.</p>
+    <a href="/blog.html" class="btn-white">More Articles</a>
+    <a href="/connect.html" class="btn-ghost">Get in Touch</a>
+  </section>
+  <footer>
+    <p>© 2026 Ability Christopher &nbsp;·&nbsp; Educator | Counsellor | Public Speaker &nbsp;·&nbsp; <a href="mailto:abilityc86@gmail.com">abilityc86@gmail.com</a></p>
+  </footer>
+  <script>
+    const hamburger=document.getElementById('hamburger');
+    const mobileMenu=document.getElementById('mobile-menu');
+    hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':''});
+    function closeMenu(){hamburger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow=''}
+  </script>
 </body>
 </html>
