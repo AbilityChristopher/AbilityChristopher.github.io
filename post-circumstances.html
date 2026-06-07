@@ -1,117 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dream Past Your Circumstances | Ability Christopher</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-            color: #1e2a3e;
-            line-height: 1.6;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(2px);
-            border-radius: 32px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        .nav {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #cbd5e1;
-        }
-        .nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #0a3b5c;
-            font-weight: 600;
-        }
-        .nav a:hover { color: #f59e0b; }
-        h1 {
-            font-size: 2.2rem;
-            color: #0a3b5c;
-            margin-bottom: 10px;
-        }
-        .post-date {
-            color: #5c6f87;
-            margin-bottom: 25px;
-            border-left: 4px solid #f59e0b;
-            padding-left: 12px;
-        }
-        .content p, .content ul {
-            margin-bottom: 20px;
-        }
-        .content ul {
-            padding-left: 30px;
-        }
-        .content li {
-            margin: 8px 0;
-        }
-        .highlight {
-            background: #fef9e6;
-            padding: 20px;
-            border-radius: 20px;
-            margin: 25px 0;
-            border-left: 5px solid #f59e0b;
-            font-style: italic;
-        }
-        .back-to-blog {
-            display: inline-block;
-            margin-top: 30px;
-            color: #0a3b5c;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            font-size: 0.85rem;
-            color: #4b5563;
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Rising Above Your Circumstances — by Ability Christopher"/>
+  <title>Rising Above Your Circumstances | Ability Christopher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--ink:#0f0f0f;--paper:#f7f4ef;--gold:#b8922a;--gold-light:#d4aa4a;--warm-mid:#e8e2d9;--muted:#7a7065;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.7;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5%;background:rgba(247,244,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--warm-mid)}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--ink);text-decoration:none;z-index:101}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{font-size:0.85rem;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;z-index:101}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--ink);transition:all 0.3s;transform-origin:center}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--ink);text-decoration:none;transition:color 0.2s}
+    .mobile-menu a:hover{color:var(--gold)}
+    .post-hero{background:var(--ink);padding:9rem 5% 5rem;position:relative;overflow:hidden}
+    .post-hero::before{content:'🌅';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:clamp(6rem,15vw,14rem);opacity:0.07;pointer-events:none}
+    .post-hero-inner{max-width:800px;margin:0 auto}
+    .back-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.78rem;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.45);text-decoration:none;margin-bottom:2rem;transition:color 0.2s}
+    .back-link:hover{color:var(--gold-light)}
+    .post-cat{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1rem;display:block}
+    .post-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:1.5rem}
+    .post-meta{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.78rem;color:rgba(255,255,255,0.4);letter-spacing:0.05em}
+    .post-body{max-width:800px;margin:0 auto;padding:5rem 5% 6rem}
+    .post-body p{font-size:1.05rem;color:#3a3530;line-height:1.9;font-weight:300;margin-bottom:1.8rem}
+    .post-body h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--ink);margin:2.5rem 0 1rem;line-height:1.2}
+    .post-body blockquote{border-left:3px solid var(--gold);padding:1rem 1.5rem;margin:2rem 0;background:var(--warm-mid)}
+    .post-body blockquote p{margin:0;font-style:italic;color:var(--ink);font-weight:400}
+    .post-body strong{font-weight:500;color:var(--ink)}
+    .post-footer{background:var(--gold);padding:5rem 5%;text-align:center}
+    .post-footer-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--white);margin-bottom:0.8rem}
+    .post-footer p{font-size:1rem;color:rgba(255,255,255,0.85);max-width:440px;margin:0 auto 2rem;font-weight:300;line-height:1.75}
+    .btn-white{background:var(--white);color:var(--gold);padding:0.9rem 2.2rem;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:opacity 0.2s;margin-right:1rem}
+    .btn-white:hover{opacity:0.88}
+    .btn-ghost{background:transparent;color:var(--white);padding:0.9rem 2.2rem;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border:2px solid rgba(255,255,255,0.5);display:inline-block;transition:background 0.2s}
+    .btn-ghost:hover{background:rgba(255,255,255,0.15)}
+    footer{background:#0a0a0a;color:rgba(255,255,255,0.4);text-align:center;padding:2.5rem 5%;font-size:0.8rem;letter-spacing:0.04em}
+    footer a{color:var(--gold-light);text-decoration:none}
+    @media(max-width:768px){.hamburger{display:flex}nav .nav-links{display:none}}
+  </style>
 </head>
 <body>
-<div class="container">
-    <div class="nav">
-        <a href="https://abilitychristopher.github.io/">Home</a>
-        <a href="services.html">Services</a>
-        <a href="connect.html">Connect</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
+  <nav>
+    <a href="/index.html" class="nav-logo">Ability Christopher</a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/projects.html">Impact</a></li>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/connect.html">Connect</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/index.html" onclick="closeMenu()">Home</a>
+    <a href="/services.html" onclick="closeMenu()">Services</a>
+    <a href="/projects.html" onclick="closeMenu()">Impact</a>
+    <a href="/gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="/blog.html" onclick="closeMenu()">Blog</a>
+    <a href="/connect.html" onclick="closeMenu()">Connect</a>
+  </div>
+  <header class="post-hero">
+    <div class="post-hero-inner">
+      <a href="/blog.html" class="back-link">← Back to Blog</a>
+      <span class="post-cat">💭 Personal Reflections</span>
+      <h1 class="post-title">Rising Above Your Circumstances</h1>
+      <div class="post-meta">
+        <span>📅 2026</span>
+        <span>⏱ 4 min read</span>
+        <span>✍️ Ability Christopher</span>
+      </div>
     </div>
-
-    <h1>Dream Past Your Circumstances</h1>
-    <div class="post-date">📅 25 May 2026 • 3 min read</div>
-
-    <div class="content">
-        <p><strong>Remaining a victim of circumstance is a state of being that we choose</strong> – a choice that:</p>
-        <ul>
-            <li>01. Allows us to blame other people</li>
-            <li>02. Let us blame circumstances</li>
-            <li>03. Permits us to avoid responsibility for our actions</li>
-            <li>04. Causes us to feel sorry for ourselves</li>
-            <li>05. Guarantee that we continue to act as victims.</li>
-        </ul>
-
-        <p>I know it's easier said than done, I know.<br>
-        But you've got to encourage yourself today, not tomorrow.<br>
-        Take a step that your future self will thank you for.<br>
-        And trust God for the outcome.</p>
-    </div>
-
-    <a href="blog.html" class="back-to-blog">← Back to all posts</a>
-
-    <footer>© 2026 Ability Christopher — Rise above circumstances</footer>
-</div>
+  </header>
+  <article class="post-body">
+    <p>Where you come from is not where you have to stay. That sentence sounds simple — almost like a motivational poster. But the truth behind it is harder and more important than any slogan. Because rising above your circumstances is not about ignoring where you came from. It is about refusing to be defined by it.</p>
+    <h2>The Weight of Context</h2>
+    <p>In Nigeria, the circumstances of your birth carry enormous weight. Which state you are from. Whether your parents were educated. Whether you had electricity growing up, access to good schools, or a family that could afford to send you to university. These things matter. They shape your starting point in ways that are very real and very unfair.</p>
+    <p>I am not going to pretend otherwise. I am not going to tell you that hard work alone is enough, or that if you just believe, everything will work out. The systemic inequalities in our society are real. They are not excuses — they are facts.</p>
+    <p>But here is what I have also seen to be true: <strong>circumstances are a starting point, not a sentence.</strong></p>
+    <blockquote><p>Your background may explain where you began. It does not have to determine where you end.</p></blockquote>
+    <h2>The People Who Proved It</h2>
+    <p>Every community in Nigeria has stories of people who defied the odds. The first in their family to attend university. The young woman from a poor background who built a business from nothing. The boy from a rural village who became a doctor, a lawyer, a leader. These are not fairy tales. They are real people who made real decisions in real, difficult circumstances.</p>
+    <p>What did they have in common? Not luck — though some had it. Not unusual talent — though many were gifted. What they shared was a refusal to accept that their circumstances were the final word on their lives. They found one open door and walked through it. Then they found another. Then another. Progress rarely comes all at once. It comes door by door.</p>
+    <h2>What Rising Above Actually Requires</h2>
+    <p><strong>Honesty about where you are.</strong> Not self-pity, but clear-eyed awareness of your starting point and the real challenges you face. You cannot navigate well if you are pretending the terrain is different from what it is.</p>
+    <p><strong>Community.</strong> The people around you matter enormously. Finding even one person — a mentor, a teacher, a cousin who has gone further — who believes in your potential and will speak into your life can change everything. You were not designed to rise alone.</p>
+    <p><strong>Patience with the process.</strong> Rising above circumstances is rarely a single dramatic moment. It is usually a long series of unglamorous choices, made consistently, over time. The results come — but they come slowly, and they come to those who keep showing up.</p>
+    <p><strong>Faith.</strong> In God, in yourself, in the possibility that your story is not finished yet. Faith is not passive — it is the fuel that keeps you moving when the evidence around you says to stop.</p>
+    <h2>To Anyone Who Feels Stuck</h2>
+    <p>If you are reading this and your circumstances feel overwhelming — I want you to know that I see you. The weight you are carrying is real. The obstacles in front of you are real. Your frustration is completely valid.</p>
+    <p>But I also want you to know this: the fact that you are still here, still reading, still looking for something — that is not nothing. That is a seed. And seeds, given the right conditions, become things that nobody expected.</p>
+    <p>Your circumstances are not your destiny. They are your starting material. And what you build with them — that is your story to write. Nobody else can write it for you. And nobody else can stop you from writing it either.</p>
+    <p>Rise. One step at a time. But rise.</p>
+  </article>
+  <section class="post-footer">
+    <h2 class="post-footer-title">Someone needs to read this today.</h2>
+    <p>Share it with someone who is fighting their circumstances — or reach out if you need someone in your corner.</p>
+    <a href="/blog.html" class="btn-white">More Articles</a>
+    <a href="/connect.html" class="btn-ghost">Get in Touch</a>
+  </section>
+  <footer>
+    <p>© 2026 Ability Christopher &nbsp;·&nbsp; Educator | Counsellor | Public Speaker &nbsp;·&nbsp; <a href="mailto:abilityc86@gmail.com">abilityc86@gmail.com</a></p>
+  </footer>
+  <script>
+    const hamburger=document.getElementById('hamburger');
+    const mobileMenu=document.getElementById('mobile-menu');
+    hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':''});
+    function closeMenu(){hamburger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow=''}
+  </script>
 </body>
 </html>
