@@ -1,90 +1,44 @@
-README.md
-# Hi, I'm Ability Christopher 👋
+# Ability Christopher — Personal Website
 
-## Educator | Counsellor | Public Speaker 
-
-I am passionate about empowering people through education, mentorship, advocacy, counselling, and digital transformation.
-
-Currently serving in Benue State, Nigeria, where I contribute to community development, digital literacy, youth empowerment, and social impact initiatives.
+**Live site:** [abilitychristopher.github.io](https://abilitychristopher.github.io)
 
 ---
 
-## 🌍 Current Engagements
+## About
 
-### Ser-Av Foundation
-Working with an organization focused on empowering women and youth through:
-- sensitization programs
-- advocacy
-- skills acquisition
-- community training initiatives
-- youth empowerment programs
+This is the personal website of **Ability Christopher** — Educator, Counsellor, and Public Speaker based in Nigeria.
 
-### NITDA DL4ALL (Digital Literacy For All)
-Facilitating digital literacy training for members of the informal sector as part of a national digital inclusion initiative.
-
-### Digital Marketing Training
-Currently building practical knowledge and skills in:
-- digital branding
-- social media marketing
-- online communication
-- audience engagement
-- content promotion
-- digital growth strategies
+> *Inspiring individuals into purpose, leadership, and influence in today's world.*
 
 ---
 
-## 🎯 Areas of Interest
+## What the Site Contains
 
-- Public speaking
-- Human potential development
-- Guidance and counselling
-- Youth mentorship
-- Leadership development
-- Educational technology
-- Community development
-- Digital literacy
-- Advocacy and empowerment
+- **Home** — Introduction, impact numbers, services overview, and community work
+- **Services** — Guidance & Counselling, Public Speaking, Digital Literacy, Financial Literacy, HRM Training, and Youth Mentorship
+- **Impact** — Detailed case studies of community projects including NITDA DL4ALL, KAFI Financial Literacy, Ser-Av Foundation, MHM Outreach, and Youth Mentorship
+- **Gallery** — Photos from NYSC camp, community outreach, strategy sessions, and training programmes
+- **Blog** — Articles on financial literacy, digital inclusion, menstrual health, purpose, and leadership
+- **Connect** — Contact form, direct links, and availability information
 
 ---
 
-## 🛠️ Skills
+## Built With
 
-- Communication
-- Public speaking
-- Counselling
-- Team leadership
-- Digital literacy facilitation
-- Community engagement
-- Microsoft Office
-- Data handling
-- Digital marketing fundamentals
+- HTML5 & CSS3
+- Vanilla JavaScript
+- Google Fonts (Cormorant Garamond & DM Sans)
+- Hosted on GitHub Pages
 
 ---
 
-## 📚 Education
+## Contact
 
-**Bachelor of Education (B.Ed.) — Guidance and Counselling**  
-Second Class Upper Division
-
----
-
-## 🏆 Leadership & NYSC Experience
-
-Served as Platoon Leader during NYSC Orientation Camp and contributed to multiple award-winning team activities including debate, cultural events, sports, and parade competitions.
+- **Email:** abilityc86@gmail.com
+- **LinkedIn:** [ability-christopher](https://www.linkedin.com/in/ability-christopher)
+- **Instagram:** [@christopher_ability](https://www.instagram.com/christopher_ability)
+- **YouTube:** [Ability Christopher](https://youtube.com/@abilitychristopher-fr4vk)
 
 ---
 
-## 🚀 Vision
-
-To become a global voice for leadership, mentorship, transformation, youth empowerment, and human potential development.
-
----
-
-## 📫 Connect With Me
-
-- LinkedIn: *https://www.linkedin.com/in/ability-christopher*
-- Email: *abilityc86@gmail.com*
-
----
-
-> “The greatest tragedy in life is not death, but life without purpose.”
+*© 2026 Ability Christopher. All rights reserved.*
