@@ -1,182 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Menstrual Hygiene Management Is More Than a Health Issue | Ability Christopher</title>
-    <meta name="description" content="Menstrual hygiene is an education, dignity, and opportunity issue. A reflection on community outreach in Makurdi and the need for holistic youth development.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fc 0%, #e9eef5 100%);
-            color: #1e2a3e;
-            line-height: 1.7;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            border-radius: 32px;
-            padding: 50px 40px;
-            box-shadow: 0 30px 50px rgba(0,0,0,0.08);
-        }
-        .nav {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #e2e8f0;
-        }
-        .nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #1e4a6b;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-        .nav a:hover {
-            color: #f59e0b;
-        }
-        .post-date {
-            color: #f59e0b;
-            font-weight: 500;
-            margin-bottom: 20px;
-            display: block;
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: #0a3b5c;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-        h2 {
-            font-size: 1.8rem;
-            color: #0a3b5c;
-            margin: 40px 0 20px 0;
-            border-bottom: 3px solid #f59e0b;
-            display: inline-block;
-            padding-bottom: 6px;
-        }
-        h3 {
-            font-size: 1.4rem;
-            color: #1e4a6b;
-            margin: 30px 0 15px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        ul, ol {
-            margin: 20px 0 20px 30px;
-        }
-        li {
-            margin: 8px 0;
-        }
-        .back-link {
-            margin-top: 50px;
-            text-align: center;
-        }
-        .back-link a {
-            background: #f59e0b;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .back-link a:hover {
-            background: #0a3b5c;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 24px;
-            border-top: 1px solid #e2e8f0;
-            font-size: 0.9rem;
-        }
-        @media (max-width: 700px) {
-            .container { padding: 30px 20px; }
-            h1 { font-size: 1.8rem; }
-            h2 { font-size: 1.5rem; }
-            .nav a { margin: 0 12px; font-size: 0.9rem; }
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Breaking the Silence: Menstrual Hygiene Management in Schools — by Ability Christopher"/>
+  <title>Breaking the Silence: MHM in Schools | Ability Christopher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--ink:#0f0f0f;--paper:#f7f4ef;--gold:#b8922a;--gold-light:#d4aa4a;--warm-mid:#e8e2d9;--muted:#7a7065;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.7;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5%;background:rgba(247,244,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--warm-mid)}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--ink);text-decoration:none;z-index:101}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{font-size:0.85rem;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover{color:var(--gold)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;z-index:101}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--ink);transition:all 0.3s;transform-origin:center}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--ink);text-decoration:none;transition:color 0.2s}
+    .mobile-menu a:hover{color:var(--gold)}
+    .post-hero{background:var(--ink);padding:9rem 5% 5rem;position:relative;overflow:hidden}
+    .post-hero::before{content:'🩸';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:clamp(6rem,15vw,14rem);opacity:0.07;pointer-events:none}
+    .post-hero-inner{max-width:800px;margin:0 auto}
+    .back-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.78rem;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.45);text-decoration:none;margin-bottom:2rem;transition:color 0.2s}
+    .back-link:hover{color:var(--gold-light)}
+    .post-cat{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1rem;display:block}
+    .post-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:1.5rem}
+    .post-meta{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:0.78rem;color:rgba(255,255,255,0.4);letter-spacing:0.05em}
+    .post-body{max-width:800px;margin:0 auto;padding:5rem 5% 6rem}
+    .post-body p{font-size:1.05rem;color:#3a3530;line-height:1.9;font-weight:300;margin-bottom:1.8rem}
+    .post-body h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--ink);margin:2.5rem 0 1rem;line-height:1.2}
+    .post-body blockquote{border-left:3px solid var(--gold);padding:1rem 1.5rem;margin:2rem 0;background:var(--warm-mid)}
+    .post-body blockquote p{margin:0;font-style:italic;color:var(--ink);font-weight:400}
+    .post-body strong{font-weight:500;color:var(--ink)}
+    .post-footer{background:var(--gold);padding:5rem 5%;text-align:center}
+    .post-footer-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--white);margin-bottom:0.8rem}
+    .post-footer p{font-size:1rem;color:rgba(255,255,255,0.85);max-width:440px;margin:0 auto 2rem;font-weight:300;line-height:1.75}
+    .btn-white{background:var(--white);color:var(--gold);padding:0.9rem 2.2rem;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:opacity 0.2s;margin-right:1rem}
+    .btn-white:hover{opacity:0.88}
+    .btn-ghost{background:transparent;color:var(--white);padding:0.9rem 2.2rem;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border:2px solid rgba(255,255,255,0.5);display:inline-block;transition:background 0.2s}
+    .btn-ghost:hover{background:rgba(255,255,255,0.15)}
+    footer{background:#0a0a0a;color:rgba(255,255,255,0.4);text-align:center;padding:2.5rem 5%;font-size:0.8rem;letter-spacing:0.04em}
+    footer a{color:var(--gold-light);text-decoration:none}
+    @media(max-width:768px){.hamburger{display:flex}nav .nav-links{display:none}}
+  </style>
 </head>
 <body>
-<div class="container">
-    <div class="nav">
-        <a href="https://abilitychristopher.github.io/">Home</a>
-        <a href="services.html">Services</a>
-        <a href="connect.html">Connect</a>
-        <a href="gallery.html">Impact & Community</a>
-        <a href="projects.html">Projects</a>
-        <a href="blog.html">Blog</a>
-    </div>
-
-    <div class="post-date">📅 8th June 2026</div>
-    <h1>Why Menstrual Hygiene Management Is More Than a Health Issue: A Conversation About Education, Dignity, and Opportunity</h1>
-
-    <p>When discussions about education and youth development take place, attention is often focused on academic performance, school infrastructure, technology, and teacher quality. While these factors are important, one critical issue that directly affects the educational experience of millions of girls remains overlooked: Menstrual Hygiene Management (MHM).</p>
-
-    <p>Menstrual hygiene is not simply a health matter. It is an education issue, a dignity issue, a gender equality issue, and a community development issue.</p>
-
-    <p>Recently, I had the opportunity to participate in a Menstrual Hygiene Management sensitization program for students of LGEA Primary School and Universal Basic Education (UBE) Kanshio, Makurdi, Benue State. The experience reinforced an important lesson: empowering young people requires addressing the practical challenges that affect their daily lives.</p>
-
-    <h2>Understanding Menstrual Hygiene Management</h2>
-    <p>Menstrual Hygiene Management refers to the access, knowledge, and resources required for girls and women to manage menstruation safely, hygienically, and with dignity.</p>
-    <p>Effective menstrual hygiene management includes:</p>
-    <ul>
-        <li>Access to accurate menstrual health education</li>
-        <li>Availability of sanitary products</li>
-        <li>Safe water and sanitation facilities</li>
-        <li>Supportive school and community environments</li>
-        <li>Freedom from stigma and discrimination</li>
+  <nav>
+    <a href="/index.html" class="nav-logo">Ability Christopher</a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/projects.html">Impact</a></li>
+      <li><a href="/gallery.html">Gallery</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/connect.html">Connect</a></li>
     </ul>
-    <p>When these elements are absent, the consequences can extend beyond health concerns and directly affect educational outcomes.</p>
-
-    <h2>The Link Between Menstrual Health and Education</h2>
-    <p>Many students experience anxiety, embarrassment, or discomfort during menstruation due to misinformation, cultural stigma, or lack of resources.</p>
-    <p>In some communities, girls miss classes because they do not have adequate menstrual hygiene materials or because they fear being stigmatized by peers. Every missed school day can affect confidence, participation, and academic performance.</p>
-    <p>Creating awareness around menstrual health helps students:</p>
-    <ul>
-        <li>Build confidence</li>
-        <li>Improve self-esteem</li>
-        <li>Stay engaged in learning</li>
-        <li>Make informed health decisions</li>
-        <li>Develop healthy personal hygiene habits</li>
-    </ul>
-    <p>For educators, parents, and community leaders, supporting menstrual health is an investment in educational success.</p>
-
-    <h2>Breaking the Silence Around Menstruation</h2>
-    <p>One of the greatest barriers to menstrual health awareness is silence. For many young people, menstruation remains a topic surrounded by myths, misconceptions, and embarrassment.</p>
-    <p>Open and age-appropriate conversations help students understand that menstruation is a normal biological process rather than something to fear or hide. Schools and community organizations have an important role to play in creating safe spaces where students can ask questions, receive accurate information, and develop confidence in managing their health.</p>
-
-    <h2>The Role of Community Outreach Programs</h2>
-    <p>Community outreach initiatives serve as powerful platforms for education and empowerment. Through awareness campaigns, health talks, and student engagement programs, organizations can bridge knowledge gaps and provide practical guidance that positively impacts young lives.</p>
-    <p>Participating in the Menstrual Hygiene Management sensitization program in Makurdi demonstrated how collaborative efforts between community organizations, educators, and volunteers can contribute to healthier and more informed school environments. These initiatives do more than share information; they help build confidence, encourage healthy behaviors, and promote student wellbeing.</p>
-
-    <h2>Why Youth Development Requires a Holistic Approach</h2>
-    <p>Youth empowerment extends beyond academic achievement. To develop their full potential, young people need support in multiple areas, including health education, digital literacy, financial literacy, personal development, leadership development, and emotional wellbeing.</p>
-    <p>When communities invest in these areas, they create environments where young people can thrive both inside and outside the classroom. This holistic approach is essential for sustainable development and long-term social impact.</p>
-
-    <h2>Moving Forward</h2>
-    <p>Building stronger communities begins with addressing the challenges that affect young people's ability to learn, grow, and succeed. Menstrual Hygiene Management awareness is one of many interventions that contribute to student wellbeing and educational inclusion.</p>
-    <p>As educators, development practitioners, volunteers, and community advocates, we all have a role to play in ensuring that every young person has access to the knowledge, resources, and support needed to reach their potential. By promoting health education, challenging stigma, and supporting youth-centered initiatives, we move closer to creating a future where every student can learn with confidence, dignity, and opportunity.</p>
-
-    <h2>Final Thoughts</h2>
-    <p>True development happens when education, health, and empowerment work together. The conversations we have today about menstrual hygiene, student wellbeing, and youth development can create lasting impacts for future generations. Every awareness session, every outreach activity, and every effort to educate young people is an investment in a stronger and more inclusive society.</p>
-
-    <div class="back-link">
-        <a href="https://abilitychristopher.github.io/blog.html">← Back to Blog</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/index.html" onclick="closeMenu()">Home</a>
+    <a href="/services.html" onclick="closeMenu()">Services</a>
+    <a href="/projects.html" onclick="closeMenu()">Impact</a>
+    <a href="/gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="/blog.html" onclick="closeMenu()">Blog</a>
+    <a href="/connect.html" onclick="closeMenu()">Connect</a>
+  </div>
+  <header class="post-hero">
+    <div class="post-hero-inner">
+      <a href="/blog.html" class="back-link">← Back to Blog</a>
+      <span class="post-cat">📘 Professional Insights</span>
+      <h1 class="post-title">Breaking the Silence: Menstrual Hygiene Management in Schools</h1>
+      <div class="post-meta">
+        <span>📅 2026</span>
+        <span>⏱ 6 min read</span>
+        <span>✍️ Ability Christopher</span>
+      </div>
     </div>
-
-    <footer>
-        © 2026 Ability Christopher
-    </footer>
-</div>
+  </header>
+  <article class="post-body">
+    <p>There is a conversation happening in Nigerian classrooms that most people would rather avoid. It involves blood, shame, missed school days, and a silence so heavy it has become its own kind of harm. I am talking about menstrual health — and the urgent need to bring honest, stigma-free education about it into every school in this country.</p>
+    <p>This is not a comfortable topic. But discomfort is not a reason to stay silent. And the evidence is clear: when we stay silent, girls pay the price.</p>
+    <h2>What I Witnessed in the Field</h2>
+    <p>As part of my NYSC service with Ser-Av Foundation, I participated in Menstrual Hygiene Management (MHM) sensitisation sessions across four schools in two communities in Benue State — LGEA Primary School Kanshio, UBE Kanshio, NKST Primary School Wadata, and UBE Wadata.</p>
+    <p>What I saw confirmed what the research has long shown: many girls are navigating their menstrual health entirely alone, with no accurate information, inadequate facilities, and surrounded by myths and shame that make everything harder. Girls missing school during their period because they have no sanitary products and fear embarrassment. Teachers refusing to discuss the topic because it is considered inappropriate. Boys mocking girls who show any sign of discomfort. The silence making everything worse.</p>
+    <blockquote><p>When a girl cannot manage her period with dignity, she cannot fully participate in her own education. It is that simple.</p></blockquote>
+    <h2>Why This Is an Education Issue</h2>
+    <p>Menstrual health is not just a health issue. It is a <strong>girls education issue</strong>. Studies consistently show that girls who lack access to proper menstrual hygiene management miss several school days per month during their period. Over an academic year, that adds up to weeks of lost learning — a gap that compounds over time and contributes to girls falling behind or dropping out entirely.</p>
+    <p>And yet, in most Nigerian schools, there is no formal provision for menstrual health education. No clean private toilets. No access to sanitary products. No trained teacher to handle the conversation. Just silence — and the damage that silence does.</p>
+    <h2>The Role of Sensitisation</h2>
+    <p>The MHM sessions I facilitated were not just about handing out information. They were about creating a safe space where students — boys and girls — could ask questions, challenge myths, and begin to see menstruation as a normal biological process rather than something shameful or dirty.</p>
+    <p>The response was telling. Girls who had never spoken about their experiences began to share. Boys who had mocked classmates began to understand. Teachers who had avoided the topic began to see it differently. A single conversation, handled with care and honesty, can shift years of silence.</p>
+    <h2>What Needs to Happen</h2>
+    <p><strong>Clean facilities.</strong> Schools need private, functional toilets that girls can use safely and with dignity during their period. This is not optional — it is a basic requirement for girls to attend school without fear.</p>
+    <p><strong>Access to sanitary products.</strong> Sanitary pads should not be a luxury. Schools, communities, and government programmes need to ensure that no girl misses school because she cannot afford basic hygiene products.</p>
+    <p><strong>Curriculum inclusion.</strong> Menstrual health education needs to be part of the formal school curriculum — taught by trained teachers, in age-appropriate ways, to both boys and girls.</p>
+    <p><strong>Community buy-in.</strong> Parents, community leaders, and religious figures all have a role to play in normalising this conversation. Shame is sustained by community silence. It is ended the same way.</p>
+    <h2>A Call to Action</h2>
+    <p>If you are an educator, a parent, a community leader, or a young person reading this — you have a role to play. Talk about this. Normalise this. Advocate for the girls in your community who are suffering in silence.</p>
+    <p>The silence is not protecting anyone. It is only making the problem worse. Breaking it is where the healing begins.</p>
+  </article>
+  <section class="post-footer">
+    <h2 class="post-footer-title">Found this helpful?</h2>
+    <p>Share it with someone who needs to read it — or get in touch to bring MHM awareness to your school or community.</p>
+    <a href="/blog.html" class="btn-white">More Articles</a>
+    <a href="/connect.html" class="btn-ghost">Get in Touch</a>
+  </section>
+  <footer>
+    <p>© 2026 Ability Christopher &nbsp;·&nbsp; Educator | Counsellor | Public Speaker &nbsp;·&nbsp; <a href="mailto:abilityc86@gmail.com">abilityc86@gmail.com</a></p>
+  </footer>
+  <script>
+    const hamburger=document.getElementById('hamburger');
+    const mobileMenu=document.getElementById('mobile-menu');
+    hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':''});
+    function closeMenu(){hamburger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow=''}
+  </script>
 </body>
 </html>
